@@ -1,0 +1,104 @@
+.carousel {
+  margin: 40px 0;
+  position: relative;
+  .thumbnail {
+    padding: 0;
+    margin-bottom: 0;
+    border: 0;
+    background-color: transparent;
+    .caption {
+      padding-top: 20px;
+      border-right: 0;
+      text-align: center;
+    }
+    img {
+      margin: 0 auto;
+      border: 8px solid white;
+      min-height: 300px;
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-family: 'Karma', serif;
+      font-weight: bold;
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+      font-weight: bold;
+      color: $font-color;
+      small {
+        font-size: 12px;
+      }
+    }
+    a {
+      display: block;
+      font-weight: bold;
+      color: $font-color;
+      text-decoration: underline;
+      font-size: 11px;
+    }
+  }
+  .carousel-control {
+    background-image: none;
+    color: black;
+    height: 32px;
+    position: absolute;
+    width: 18px;
+    top: initial;
+    left: initial;
+    right: 10px;
+    bottom: 0;
+    opacity: 1;
+    cursor: pointer;
+    &.left {
+      right: 50px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+/* Responsive: Mobile First */
+@media screen and (min-width: 768px) {
+  .carousel {
+    .thumbnail {
+      .caption {
+        text-align: right;
+        padding-top: 0;
+        border-right: 1px solid black;
+        a {
+          margin-top: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .carousel {
+    margin: 40px 0;
+    .thumbnail {
+      padding: 0;
+      margin-bottom: 0;
+      border: 0;
+      background-color: transparent;
+      .caption {
+        padding-right: 30px;
+        border-right: 1px solid black;
+        text-align: right;
+      }
+      a {
+        margin-top: 65px;
+      }
+    }
+  }
+}

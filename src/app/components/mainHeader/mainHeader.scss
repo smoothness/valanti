@@ -1,0 +1,160 @@
+/* Header */
+
+.header {
+  border-bottom: 2px solid $lines-border-color;
+  background-color: $header-background-color;
+  padding-top: 10px;
+  
+  .navbar-default {
+    background-color: transparent;
+    border: none;
+    margin-bottom: 0;
+    .navbar-collapse {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .navbar-header {
+    button {
+      color: black;
+      border: 1px solid black;
+      border-radius: 0;
+      margin-left: 15px;
+      &:hover,
+      &:focus {
+        background: white;
+      }
+    }
+    .icon-bar {
+      font-size: 14px;
+      background: black;
+      padding: 0;
+    }
+  }
+  
+  .nav {
+    width: 100%;
+    li {
+      a {
+        color: black;
+        font-size: 1.1em;
+        font-weight: 900;
+        text-align: center;
+      }
+      &:hover {
+        opacity: 0.75;
+      }
+      &.social {
+        float: right;
+        height: 35px;
+        padding-top: 15px;
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          li {
+            float: left;
+            margin-left: 12px;
+            i {
+              font-size: 1.35em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+
+  hr {
+    border-color: $lines-color;
+    margin: 20px 0 0;
+  }
+  
+  .lang-btn {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 900;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: black;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.75;
+    }
+  }
+  
+  .social-btn:hover {
+    text-decoration: none;
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    color: black;
+    font-size: 21px;
+    padding: 10px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    .nav {
+      li {
+        display: inline;
+        a {
+          display: inline-block;
+          margin-right: 40px;
+          color: black;
+          font-size: 15px;
+          font-weight: 900;
+          padding: 25px 0;
+          &.social-btn {
+            margin-left: 25px;
+            margin-right: 0;
+            padding: 25px 0px 25px 10px;
+            i {
+              padding: 0;
+              line-height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .nav {
+      li {
+        a {
+          margin-right: 18px;
+          font-size: 14px;
+          font-weight: 900;
+          padding: 25px 0;
+          &.social-btn {
+            margin-left: 16px;
+            margin-right: 0;
+            padding: 25px 0px;
+            i {
+              padding: 0;
+              line-height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

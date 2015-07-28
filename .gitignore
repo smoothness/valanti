@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+.sass-cache/
+.idea/
+.tmp/
+dist/
+
+# Mac OS X hidden files
+.DS_Store

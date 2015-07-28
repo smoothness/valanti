@@ -1,0 +1,31 @@
+(function() {
+  'use strict';
+
+  angular
+    .module('valanti')
+    .directive('tile', tile);
+
+  /** @ngInject */
+  function tile() {
+    var directive = {
+      restrict: 'E',
+      replace: false,
+      templateUrl: 'app/components/tile/tile.html',
+      scope: {
+        'pieceData': '='
+      },
+      controller: TileController,
+      controllerAs: 'tile',
+      bindToController: true
+    };
+
+    return directive;
+
+    /** @ngInject */
+    function TileController($rootScope) {
+      var t = this;
+      t.baseURL = $rootScope.baseURL;
+    }
+  }
+
+})();
