@@ -2,7 +2,8 @@
   <div>
     <div class="row">
       <div class="col-xs-12 gallery-tiles">
-        <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists">
+        <preloader ng-show="!ac.loaded"></preloader>
+        <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists" ng-show="ac.loaded">
           <div class="tile">
             <div ng-if="!artist.foto">
               <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">

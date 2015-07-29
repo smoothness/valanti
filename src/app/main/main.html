@@ -8,7 +8,8 @@
     <div>
       <div class="row">
         <div class="col-xs-12 gallery-tiles">
-          <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in main.tiles">
+          <preloader ng-show="!main.loaded"></preloader>
+          <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in main.tiles" ng-show="main.loaded">
             <tile piece-data="tile"></tile>
           </div>
         </div>

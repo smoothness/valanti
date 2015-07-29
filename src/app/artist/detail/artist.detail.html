@@ -21,8 +21,11 @@
         <div class="col-xs-12 gallery-tiles">
           <tabset>
             <tab heading="Galería">
-              <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.tiles">
-                <tile piece-data="tile"></tile>
+              <preloader ng-show="!adc.loaded"></preloader>
+              <div ng-show="adc.loaded">
+                <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.tiles">
+                  <tile piece-data="tile"></tile>
+                </div>
               </div>
             </tab>
             <tab heading="Biografía">
