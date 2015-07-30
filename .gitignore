@@ -7,3 +7,6 @@ dist/
 
 # Mac OS X hidden files
 .DS_Store
+
+# Divshot cache object
+.divshot-cache
