@@ -25,6 +25,12 @@
         templateUrl: 'app/artist/detail/artist.detail.html',
         controller: 'ArtistDetailController',
         controllerAs: 'adc'
+      })
+      .state('piece-details', {
+        url: '/piece/:id',
+        templateUrl: 'app/components/modal/modalInstance.html',
+        controller: 'ModalInstanceController',
+        controllerAs: 'mic'
       });
 
     $urlRouterProvider.otherwise('/');

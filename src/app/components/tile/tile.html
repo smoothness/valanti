@@ -4,6 +4,6 @@
     <h5 class="text-uppercase">{{ tile.pieceData.nombreArtista }}</h5>
     <h4 class="text-uppercase">{{ tile.pieceData.titulo }}</h4>
     <p class="description">{{ tile.pieceData.tecnica }} <br /> <small>Alto: {{ tile.pieceData.altura }} cms / Ancho: {{ tile.pieceData.ancho }} cms</small></p>
-    <a class="btn btn-default text-uppercase pull-right" role="button">Ver</a>
+    <a ng-click="tile.openModal()" class="btn btn-default text-uppercase pull-right" role="button">Ver</a>
   </div>
 </div>

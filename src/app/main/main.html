@@ -10,7 +10,7 @@
         <div class="col-xs-12 gallery-tiles">
           <preloader ng-show="!main.loaded"></preloader>
           <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in main.tiles" ng-show="main.loaded">
-            <tile piece-data="tile" trigger-modal="main.toggleModal()"></tile>
+            <tile piece-data="tile" open-modal="main.open()" trigger-modal="main.toggleModal()"></tile>
           </div>
         </div>
         <!-- <div class="col-xs-12 refresh-trigger">
@@ -20,14 +20,6 @@
     </div>
   </div>
 
-
-
-  <button ng-click="main.toggleModal()">Open Modal Dialog</button>
-  <modal-dialog show="main.modalShown" width="750px" height="60%">
-    <p>Modal Content Goes here<p>
-    <p>La zanja Loca!!<p>
-  </modal-dialog>
-
-
+  <!-- <button class="btn btn-default" ng-click="main.open()">Open me!</button> -->
 
 </div>
