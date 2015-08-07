@@ -10,7 +10,7 @@
         <div class="col-xs-12 gallery-tiles">
           <preloader ng-show="!main.loaded"></preloader>
           <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in main.tiles" ng-show="main.loaded">
-            <tile piece-data="tile" open-modal="main.open()" trigger-modal="main.toggleModal()"></tile>
+            <tile piece-data="tile" open-modal="main.open()"></tile>
           </div>
         </div>
         <!-- <div class="col-xs-12 refresh-trigger">

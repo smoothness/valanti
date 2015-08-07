@@ -16,31 +16,28 @@
       mc.tiles = data;
       mc.loaded = true;
     });
-
-
-    //modal controller shit
+    
+    // Modal instantiation
     mc.animationsEnabled = true;
-    mc.open = function (size) {
+    mc.open = function () {
       var modalInstance = $modal.open({
         animation: mc.animationsEnabled,
-        templateUrl: 'app/components/modal/modalInstance.html',
-        controller: 'ModalInstanceController',
-        size: size,
+        templateUrl: 'app/components/modal/modal.html',
+        controller: 'ModalController',
+        // controllerAs: 'mod',
+        // bindToController: true,
+        size: 'lg',
         resolve: {}
       });
-      // console.log(modalInstance);
+
+      console.log(modalInstance);
+
+      // modalInstance.result.then(function (selectedItem) {
+      //   $scope.selected = selectedItem;
+      // }, function () {
+      //   $log.info('Modal dismissed at: ' + new Date());
+      // });
     };
-
-    // modalInstance.result.then(function (selectedItem) {
-    //   $scope.selected = selectedItem;
-    // }, function () {
-    //   $log.info('Modal dismissed at: ' + new Date());
-    // });
-
-    // $scope.toggleAnimation = function () {
-    //   $scope.animationsEnabled = !$scope.animationsEnabled;
-    // };
-
 
   }    
 
