@@ -2,6 +2,7 @@
   'use strict';
 
   angular.module('valanti')
+
   .factory('MainTiles', function MainTilesFactory($http) {
     return {
       tiles: function() {
@@ -18,6 +19,7 @@
       }
     }
   })
+
   .factory('MainSlider', function MainSliderFactory($http) {
     return {
       slides: function() {
@@ -28,6 +30,7 @@
       }
     }
   })
+
   .factory('AllArtists', function AllArtistsFactory($http) {
     return {
       getAllArtists: function() {
@@ -38,6 +41,18 @@
       }
     }
   })
+
+  .factory('AllPieces', function AllPiecesFactory($http) {
+    return {
+      getAllPieces: function() {
+        return $http({
+          method: 'GET',
+          url: 'http://www.galeriavalanti.com/Admin/backend/obra.php/get'
+        });
+      }
+    }
+  })
+  
   .service('currArtist', function CurrentArtistService(){
     var currArtist = this;
     currArtist.artist;
@@ -48,6 +63,22 @@
       },
       getCurrArtist: function() {
         return currArtist.artist;
+      }
+    }
+  })
+  
+  .service('currPiece', function CurrentPieceService(){
+    var currPiece = this;
+    currPiece.piece;
+
+    console.log(currPiece.piece);
+
+    return {
+      setCurrPiece: function(piece) {
+        currPiece.piece = piece;
+      },
+      getCurrPiece: function() {
+        return currPiece.piece;
       }
     }
   });

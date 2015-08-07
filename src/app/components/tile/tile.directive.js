@@ -12,7 +12,8 @@
       replace: false,
       templateUrl: 'app/components/tile/tile.html',
       scope: {
-        'pieceData': '='
+        'pieceData': '=',
+        'openModal': '&'
       },
       controller: TileController,
       controllerAs: 'tile',
@@ -22,9 +23,10 @@
     return directive;
 
     /** @ngInject */
-    function TileController($rootScope) {
+    function TileController($rootScope, currPiece) {
       var t = this;
       t.baseURL = $rootScope.baseURL;
+      t.currPiece = currPiece;
     }
   }
 

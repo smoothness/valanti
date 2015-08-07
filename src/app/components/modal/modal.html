@@ -1,0 +1,26 @@
+<div class="modal-header">
+	<img src="assets/images/galeria-valanti-logo.png" alt="Galer&iacute;a Valanti">
+	<button class="close-btn pull-right" ng-click="ok()"><i class="fa fa-times"></i></button>
+</div>
+
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-8">
+			<img class="img-responsive" ng-src="{{ piece.baseURL }}{{ piece.pieceData.imagen }}" alt="{{ piece.pieceData.nombreArtista }} | {{ piece.pieceData.titulo }}">
+		</div>
+		<div class="col-md-4">
+		  <h2>{{ piece.pieceData.nombreArtista }}</h2>
+		  <h1>"{{ piece.pieceData.titulo }}"</h1>
+		  <p>{{ piece.pieceData.altura }} x {{ piece.pieceData.ancho }} cms.<br>
+		  {{ piece.pieceData.ano }}<br>
+		  {{ piece.pieceData.tecnica }}</p>
+		  <a class="btn btn-default text-uppercase" href="#">Solicitar información</a>
+		  <p><small>Favor <a href="#">contacte</a> la galería para solicitar precios</small></p>
+		  <p><small><a href="#">Regresar a obras del artista</a></small></p>
+	  </div>
+	</div>
+</div>
+
+<div class="modal-footer">
+    <!-- <button class="btn btn-warning" ng-click="cancel()">Cancel</button> -->
+</div>
