@@ -1,6 +1,9 @@
 .carousel {
   margin: 40px 0;
   position: relative;
+  .carousel-indicators {
+    display: none;
+  }
   .thumbnail {
     padding: 0;
     margin-bottom: 0;

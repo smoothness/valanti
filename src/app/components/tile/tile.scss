@@ -12,6 +12,8 @@
     transition: border .2s ease-in-out;
     img {
       width: 100%;
+      cursor: pointer;
+      &:hover {opacity: 0.7;}
     }
     h4 {
       margin-top: 0;
@@ -21,10 +23,13 @@
       font-family: 'Karma', serif;
     }
     h5 {
+      cursor: pointer;
       margin-top: 10px;
       margin-bottom: 10px;
       font-size: 12px;
       font-weight: bold;
+      transition: opacity 0.2s linear;
+      &:hover {opacity: 0.6;}
     }
     p {
       color: $font-gray-color;

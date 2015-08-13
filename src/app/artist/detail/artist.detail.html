@@ -36,12 +36,12 @@
                 <div ng-if="adc.artist.imagen">
                   <img class="img-responsive" ng-src="{{ adc.baseURL }}{{ adc.artist.imagen }}" alt="{{ adc.artist.nombreCompleto }}">
                 </div>
-                <p>{{ adc.artist.biografia }}</p>
+                <p ng-bind-html="adc.artist.biografia | newlines"></p>
               </div>
             </tab>
             <tab heading="Exposiciones">
               <div>
-                <p>{{ adc.artist.exposiciones }}</p>
+                <p ng-bind-html="adc.artist.exposiciones | newlines"></p>
               </div>
             </tab>
           </tabset>

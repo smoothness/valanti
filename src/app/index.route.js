@@ -6,7 +6,9 @@
     .config(routeConfig);
 
   /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
+  function routeConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+
+    // set up the states
     $stateProvider
       .state('home', {
         url: '/',
@@ -27,7 +29,12 @@
         controllerAs: 'adc'
       });
 
+    // for any unmatched url
     $urlRouterProvider.otherwise('/');
+
+    // remove hash from url's
+    $locationProvider.html5Mode(true);
+    
   }
 
 })();

@@ -30,8 +30,6 @@
         resolve: {}
       });
 
-      console.log(modalInstance);
-
       // modalInstance.result.then(function (selectedItem) {
       //   $scope.selected = selectedItem;
       // }, function () {

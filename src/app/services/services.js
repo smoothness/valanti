@@ -71,8 +71,6 @@
     var currPiece = this;
     currPiece.piece;
 
-    console.log(currPiece.piece);
-
     return {
       setCurrPiece: function(piece) {
         currPiece.piece = piece;
