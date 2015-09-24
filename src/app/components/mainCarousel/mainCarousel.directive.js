@@ -22,7 +22,7 @@
     function MainCarouselController($scope, $rootScope, MainSlider) {
 
       var mcarousel = this;
-      mcarousel.myInterval = 5000;
+      mcarousel.myInterval = 10000;
       mcarousel.slides = [];
       mcarousel.baseURL = $rootScope.baseURL;
 
