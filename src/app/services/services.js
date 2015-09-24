@@ -8,13 +8,13 @@
       tiles: function() {
         return $http({
           method: 'GET',
-          url: 'http://www.galeriavalanti.com/Admin/backend/obra.php/gethome'
+          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/gethome'
         });
       },
       tilesByArtist: function(id) {
         return $http({
           method: 'GET',
-          url: 'http://www.galeriavalanti.com/Admin/backend/obra.php/gethome?idArtista=' + id
+          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/gethome?idArtista=' + id
         });
       }
     }
@@ -25,7 +25,7 @@
       slides: function() {
         return $http({
           method: 'GET',
-          url: 'http://www.galeriavalanti.com/Admin/backend/obra.php/getfeatured'
+          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/getfeatured'
         });
       }
     }
@@ -36,7 +36,7 @@
       getAllArtists: function() {
         return $http({
           method: 'GET',
-          url: 'http://www.galeriavalanti.com/Admin/backend/artista.php/get'
+          url: 'http://beta.galeriavalanti.com/Admin/backend/artista.php/get'
         });
       }
     }
@@ -47,7 +47,7 @@
       getAllPieces: function() {
         return $http({
           method: 'GET',
-          url: 'http://www.galeriavalanti.com/Admin/backend/obra.php/get'
+          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/get'
         });
       }
     }
