@@ -21,8 +21,13 @@
 		}
 
 		// returns a piece by id
-		function getUrlForId(obraId) {
+		function getUrlForPieceId(obraId) {
 			return ENDPOINT_URI + 'Admin/backend/obra.php/get' + '?idObra=' + obraId;
+		}
+
+		// returns a piece by artist id
+		function getUrlForArtistId(artistaId) {
+			return ENDPOINT_URI + 'Admin/backend/obra.php/get' + '?idArtista=' + artistaId;
 		}
 
 		service.all = function() {
@@ -30,7 +35,11 @@
 		};
 
     service.fetch = function (obraId) {
-      return $http.get(getUrlForId(artistId)).then(extract);
+      return $http.get(getUrlForPieceId(artistId)).then(extract);
+    };
+
+    service.fetchByArtist = function (artistaId) {
+      return $http.get(getUrlForArtistId(artistaId)).then(extract);
     };
 
 	}

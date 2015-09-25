@@ -7,13 +7,34 @@
 
   // ArtistDetailController.$inject = ['dependencies'];
 
-  function ArtistDetailController(ArtistsModel, $stateParams, ENDPOINT_URI) {
+  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal) {
     
     var ctrl = this;
     var artistId = $stateParams.id;
 
     ctrl.loaded = false;
     ctrl.baseUri = ENDPOINT_URI;
+
+        // Modal instantiation
+    ctrl.animationsEnabled = true;
+
+    ctrl.open = function(item) {
+
+      var modalInstance = $modal.open({
+        animation: ctrl.animationsEnabled,
+        templateUrl: 'app/components/modal/modal.html',
+        controller: 'ModalController',
+        size: 'lg',
+        item: item,
+        resolve: {
+          item: function() {
+            return item;
+          }
+        }
+        // controllerAs: 'mod',
+        // bindToController: true,
+      });
+    }
 
     // get artist serviec
     ctrl.getArtist = function() {
@@ -26,14 +47,15 @@
 
     // get pieces by artist
     ctrl.getPiecesByArtist = function() {
-      ArtistsModel.fetch(artistId)
+      PiecesModel.fetchByArtist(artistId)
         .then(function(result) {
-          ctrl.artist = (result !== 'null') ? result[0] : {};
+          ctrl.piecesByArtist = (result !== 'null') ? result : {};
           ctrl.loaded = true;
         });
     };
 
     ctrl.getArtist();
+    ctrl.getPiecesByArtist();
 
   }
 
