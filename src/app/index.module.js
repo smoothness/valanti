@@ -6,7 +6,6 @@
     	'ngResource', 
     	'ui.router', 
     	'ngAnimate', 
-    	'ui.bootstrap', 
-    	'ngLodash', 
+    	'ui.bootstrap',
     	'ngSanitize']);    
 })();
