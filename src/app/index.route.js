@@ -16,15 +16,15 @@
         controller: 'MainController',
         controllerAs: 'main'
       })
-      .state('artist', {
-        url: '/artist',
-        templateUrl: 'app/artist/artist.html',
-        controller: 'ArtistController',
+      .state('artists', {
+        url: '/artists',
+        templateUrl: 'app/artists/artists.html',
+        controller: 'ArtistsController',
         controllerAs: 'ac'
       })
       .state('artist-details', {
-        url: '/artist/:id',
-        templateUrl: 'app/artist/detail/artist.detail.html',
+        url: '/artists/:id',
+        templateUrl: 'app/artists/detail/artist.detail.html',
         controller: 'ArtistDetailController',
         controllerAs: 'adc'
       });

@@ -1,0 +1,47 @@
+<div class="artist-detail-wrapper">
+  <div class="container">
+  
+    <!-- {{adc.artist | json }} -->
+
+    <div class="row detail-header">
+      <div class="col-sm-3 col-md-2">
+        <div class="image-wrapper">
+          <div ng-if="!adc.artist.imagen">
+            <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
+          </div>
+          <div ng-if="adc.artist.imagen">
+            <img class="img-responsive" ng-src="{{ adc.baseUri }}{{ adc.artist.imagen }}" alt="{{ adc.artist.nombreCompleto }}">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9 col-md-10">
+        <h1>{{ adc.artist.nombreCompleto }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 gallery-tiles">
+        <tabset>
+          <tab heading="Galería">
+            <preloader ng-show="!adc.loaded"></preloader>
+            <div ng-show="adc.loaded">
+<!--          <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.tiles">
+                <tile piece-data="tile"></tile>
+              </div> -->
+            </div>
+          </tab>
+          <tab heading="Biografía">
+            <div>
+              <p ng-bind-html="adc.artist.biografia"></p>
+            </div>
+          </tab>
+          <tab heading="Exposiciones">
+            <div>
+              <p ng-bind-html="adc.artist.exposiciones"></p>
+            </div>
+          </tab>
+        </tabset>
+      </div>
+
+  </div>
+</div>

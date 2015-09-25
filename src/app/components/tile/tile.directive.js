@@ -5,7 +5,6 @@
     .module('valanti')
     .directive('tile', tile);
 
-  /** @ngInject */
   function tile() {
     var directive = {
       restrict: 'E',
@@ -23,23 +22,22 @@
     return directive;
 
     /** @ngInject */
-    function TileController($rootScope, currPiece, currArtist, AllArtists, lodash) {
-      var t = this;
-      t.baseURL = $rootScope.baseURL;
-      t.currPiece = currPiece;
-      t.currArtist = currArtist;
-      t.allArtists;
+    function TileController(ENDPOINT_URI, HomeTilesModel) {
 
-      AllArtists.getAllArtists().success(function(data) {
-        t.allArtists = data;
-      });
+    //   var ctrl = this;
+    //   ctrl.baseUri = ENDPOINT_URI;
+    //   // ctrl.currPiece = currPiece;
+    //   // ctrl.currArtist = currArtist;
+    //   // ctrl.allArtists;
 
-      t.setArtistById = function(id) {
-        var artist = lodash.find(t.allArtists, function(obj) {
-          return obj.idArtista == id;
-        });
-        t.currArtist.setCurrArtist(artist);
-      };
+    //   ctrl.getHomeTiles = function() {
+    //     HomeTilesModel.getHomeTiles()
+    //     .then(function (result) {
+    //       ctrl.homeTiles = (result !== 'null') ? result : {};
+    //     });  
+    //   };
+
+    //   ctrl.getHomeTiles();
 
     }
 

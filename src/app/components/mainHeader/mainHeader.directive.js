@@ -19,7 +19,7 @@
     return directive;
 
     /** @ngInject */
-    function MainHeaderController(moment) {
+    function MainHeaderController() {
       var mheader = this;
 
       // "vm.creation" is avaible by directive option "bindToController: true"

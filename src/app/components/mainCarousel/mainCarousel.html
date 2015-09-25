@@ -1,11 +1,11 @@
 <div class="container">
-
+  {{mcarousel.slides | json}}
   <carousel interval="mcarousel.myInterval" no-wrap="noWrapSlides">
     <slide ng-repeat="slide in mcarousel.slides" active="slide.active">
       <div class="thumbnail">
         <div class="row">
           <div class="col-xs-8">
-            <img class="img-responsive" ng-src="{{ mcarousel.baseURL }}{{ slide.imagen }}">
+            <img class="img-responsive" ng-src="{{ mcarousel.baseUri }}{{ slide.imagen }}">
           </div>
           <div class="col-xs-4">
             <div class="caption text-right">

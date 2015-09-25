@@ -19,7 +19,7 @@
     return directive;
 
     /** @ngInject */
-    function MainFilterController(moment) {
+    function MainFilterController() {
       var mfilter = this;
     }
   }

@@ -1,9 +1,8 @@
-/* global malarkey:false, moment:false */
 (function() {
   'use strict';
 
   angular
     .module('valanti')
-    .constant('moment', moment);
+    .constant('ENDPOINT_URI', 'http://www.galeriavalanti.com/');
 
 })();

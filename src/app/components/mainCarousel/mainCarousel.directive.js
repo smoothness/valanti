@@ -5,7 +5,6 @@
     .module('valanti')
     .directive('mainCarousel', mainCarousel);
 
-  /** @ngInject */
   function mainCarousel() {
     var directive = {
       restrict: 'E',
@@ -18,19 +17,23 @@
 
     return directive;
 
-    /** @ngInject */
-    function MainCarouselController($scope, $rootScope, MainSlider) {
+    function MainCarouselController(SlidesModel, ENDPOINT_URI) {
 
-      var mcarousel = this;
-      mcarousel.myInterval = 10000;
-      mcarousel.slides = [];
-      mcarousel.baseURL = $rootScope.baseURL;
+      var ctrl = this;
+      ctrl.myInterval = 10000;
+      // ctrl.slides = [];
+      ctrl.baseUri = ENDPOINT_URI;
 
-      MainSlider.slides().success(function(data) {
-        mcarousel.slides = data;
-      });
+      ctrl.allSlides = function() {
+        SlidesModel.getSlides()
+        .then(function (result) {
+          ctrl.slides = (result !== 'null') ? result : {};
+        });  
+      };
 
+      ctrl.allSlides();
     }
+    
   }
 
 })();

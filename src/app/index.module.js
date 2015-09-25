@@ -8,6 +8,5 @@
     	'ngAnimate', 
     	'ui.bootstrap', 
     	'ngLodash', 
-    	'ngSanitize']);
-    
+    	'ngSanitize']);    
 })();

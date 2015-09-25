@@ -19,7 +19,7 @@
     return directive;
 
     /** @ngInject */
-    function MainFooterController(moment) {
+    function MainFooterController() {
       var mfooter = this;
 
       // "vm.creation" is avaible by directive option "bindToController: true"

@@ -2,21 +2,25 @@
   <div>
     <div class="row">
       <div class="col-xs-12 gallery-tiles">
+
         <preloader ng-show="!ac.loaded"></preloader>
-        <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists" ng-show="ac.loaded">
+        {{ac.artists | json}}
+
+<!--         <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists" ng-show="ac.loaded">
           <div class="tile">
-            <div ng-if="!artist.foto">
+            <div ng-if="!artist.imagen">
               <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
             </div>
-            <div ng-if="artist.foto">
-              <img class="img-responsive" ng-src="{{ ac.baseURL }}{{ artist.foto }}" alt="{{ artist.nombreCompleto }}">
+            <div ng-if="artist.imagen">
+              <img class="img-responsive" ng-src="{{ ac.baseUri }}{{ artist.imagen }}" alt="{{ artist.nombreCompleto }}">
             </div>
             <div class="caption">
               <h4 class="text-uppercase">{{ artist.nombreCompleto }}</h4>
-              <a ng-href="/artist/{{ artist.idArtista }}" ng-click="ac.currArtist.setCurrArtist(artist)" class="btn btn-default text-uppercase" role="button">Ver</a>
+              <a ng-href="/artists/{{ artist.idArtista }}" class="btn btn-default text-uppercase" role="button">Ver</a>
             </div>
-          </div>
+          </div> -->
         </div>
+
       </div>
     </div>
   </div>

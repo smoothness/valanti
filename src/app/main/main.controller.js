@@ -6,22 +6,28 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController(MainTiles, $modal, $scope) {
-    var mc = this;
-    mc.tiles = [];
-    mc.loaded = false;  
+  function MainController($modal, HomeTilesModel, ENDPOINT_URI) {
+    var ctrl = this;
+    // ctrl.tiles = [];
+    ctrl.loaded = false;  
+    ctrl.baseUri = ENDPOINT_URI;
 
     // main tiles service call
-    MainTiles.tiles().success(function(data) {
-      mc.tiles = data;
-      mc.loaded = true;
-    });
+    ctrl.getHomeTiles = function() {
+      HomeTilesModel.getHomeTiles()
+      .then(function (result) {
+        ctrl.homeTiles = (result !== 'null') ? result : {};
+      });  
+    };
+
+    ctrl.getHomeTiles();
+
     
     // Modal instantiation
-    mc.animationsEnabled = true;
-    mc.open = function () {
+    ctrl.animationsEnabled = true;
+    ctrl.open = function () {
       var modalInstance = $modal.open({
-        animation: mc.animationsEnabled,
+        animation: ctrl.animationsEnabled,
         templateUrl: 'app/components/modal/modal.html',
         controller: 'ModalController',
         // controllerAs: 'mod',

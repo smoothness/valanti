@@ -3,33 +3,33 @@
 
   angular.module('valanti')
 
-  .factory('MainTiles', function MainTilesFactory($http) {
-    return {
-      tiles: function() {
-        return $http({
-          method: 'GET',
-          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/gethome'
-        });
-      },
-      tilesByArtist: function(id) {
-        return $http({
-          method: 'GET',
-          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/gethome?idArtista=' + id
-        });
-      }
-    }
-  })
+  // .factory('MainTiles', function MainTilesFactory($http) {
+  //   return {
+  //     tiles: function() {
+  //       return $http({
+  //         method: 'GET',
+  //         url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/gethome'
+  //       });
+  //     },
+  //     tilesByArtist: function(id) {
+  //       return $http({
+  //         method: 'GET',
+  //         url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/gethome?idArtista=' + id
+  //       });
+  //     }
+  //   }
+  // })
 
-  .factory('MainSlider', function MainSliderFactory($http) {
-    return {
-      slides: function() {
-        return $http({
-          method: 'GET',
-          url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/getfeatured'
-        });
-      }
-    }
-  })
+  // .factory('MainSlider', function MainSliderFactory($http) {
+  //   return {
+  //     slides: function() {
+  //       return $http({
+  //         method: 'GET',
+  //         url: 'http://beta.galeriavalanti.com/Admin/backend/obra.php/getfeatured'
+  //       });
+  //     }
+  //   }
+  // })
 
   .factory('AllArtists', function AllArtistsFactory($http) {
     return {
@@ -70,8 +70,6 @@
   .service('currPiece', function CurrentPieceService(){
     var currPiece = this;
     currPiece.piece;
-
-    console.log(currPiece.piece);
 
     return {
       setCurrPiece: function(piece) {

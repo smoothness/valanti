@@ -10,8 +10,6 @@
 
     $log.debug('runBlock end');
 
-    $rootScope.baseURL = 'http://beta.galeriavalanti.com/';
-
   }
 
 })();
