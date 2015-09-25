@@ -15,11 +15,10 @@
     ctrl.loaded = false;
     ctrl.baseUri = ENDPOINT_URI;
 
-        // Modal instantiation
+    // Modal instantiation
     ctrl.animationsEnabled = true;
 
     ctrl.open = function(item) {
-
       var modalInstance = $modal.open({
         animation: ctrl.animationsEnabled,
         templateUrl: 'app/components/modal/modal.html',
@@ -31,8 +30,6 @@
             return item;
           }
         }
-        // controllerAs: 'mod',
-        // bindToController: true,
       });
     }
 

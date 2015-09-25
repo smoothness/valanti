@@ -5,7 +5,6 @@
     .module('valanti')
     .directive('mainFilter', mainFilter);
 
-  /** @ngInject */
   function mainFilter() {
     var directive = {
       restrict: 'E',
@@ -18,9 +17,10 @@
 
     return directive;
 
-    /** @ngInject */
     function MainFilterController() {
+
       var mfilter = this;
+
     }
   }
 

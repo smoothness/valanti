@@ -5,7 +5,6 @@
     .module('valanti')
     .directive('mainFooter', mainFooter);
 
-  /** @ngInject */
   function mainFooter() {
     var directive = {
       restrict: 'E',
@@ -18,12 +17,10 @@
 
     return directive;
 
-    /** @ngInject */
     function MainFooterController() {
+
       var mfooter = this;
 
-      // "vm.creation" is avaible by directive option "bindToController: true"
-      // vm.relativeDate = moment(vm.creationDate).fromNow();
     }
   }
 

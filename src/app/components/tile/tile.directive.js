@@ -21,7 +21,7 @@
 
     return directive;
 
-    function TileController(ENDPOINT_URI, HomeTilesModel) {
+    function TileController(ENDPOINT_URI) {
 
       var ctrl = this;
 
