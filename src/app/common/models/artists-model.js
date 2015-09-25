@@ -15,10 +15,12 @@
 			return result.data;
 		}
 
+		// returns all artists
 		function getUrl() {
 			return ENDPOINT_URI + 'Admin/backend/artista.php/get';
 		}
 
+		// returns an artist by id
 		function getUrlForId(artistId) {
 			return ENDPOINT_URI + 'Admin/backend/artista.php/get' + '?idArtista=' + artistId;
 		}

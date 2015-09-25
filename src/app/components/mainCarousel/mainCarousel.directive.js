@@ -20,8 +20,8 @@
     function MainCarouselController(SlidesModel, ENDPOINT_URI) {
 
       var ctrl = this;
+      
       ctrl.myInterval = 10000;
-      // ctrl.slides = [];
       ctrl.baseUri = ENDPOINT_URI;
 
       ctrl.allSlides = function() {

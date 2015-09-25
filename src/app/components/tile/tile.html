@@ -1,15 +1,19 @@
 <div class="tile">
 
-	{{tile | json}}
-  <img ng-click="tile.openModal();" class="img-responsive" ng-src="{{ tile.baseUri }}{{ tile.pieceData.thumb }}" alt="{{ tile.pieceData.nombreArtista }} | {{ tile.pieceData.titulo }}">
-  <div class="caption">
-
-    <h5 class="text-uppercase">
-    	<a ng-click="tile.setArtistById(tile.pieceData.idArtista)" ng-href="/artist/{{ tile.pieceData.idArtista }}">{{ tile.pieceData.nombreArtista }}</a>
-    </h5>
-
-    <h4 class="text-uppercase">{{ tile.pieceData.titulo }}</h4>
-    <p class="description">{{ tile.pieceData.tecnica }} <br /> <small>Alto: {{ tile.pieceData.altura }} cms / Ancho: {{ tile.pieceData.ancho }} cms</small></p>
-    <a ng-click="tile.openModal(); tile.currPiece.setCurrPiece(tile);" class="btn btn-default text-uppercase pull-right" role="button">Ver</a>
+	<div ng-if="!tc.pieceData.thumb">
+		<img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
+	</div>
+	<div ng-if="tc.pieceData.thumb">	
+  	<img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}{{ tc.pieceData.thumb }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
   </div>
+
+  <div class="caption">
+    <h5 class="text-uppercase">
+    	<a ng-href="/artists/{{ tc.pieceData.idArtista }}">{{ tc.pieceData.nombreArtista }}</a>
+    </h5>
+    <h4 class="text-uppercase">{{ tc.pieceData.titulo }}</h4>
+    <p class="description">{{ tc.pieceData.tecnica }} <br /> <small>Alto: {{ tc.pieceData.altura }} cms / Ancho: {{ tc.pieceData.ancho }} cms</small></p>
+    <a ng-click="tc.openModal();" class="btn btn-default text-uppercase pull-right" role="button">Ver</a>
+  </div>
+
 </div>

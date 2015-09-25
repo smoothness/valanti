@@ -6,11 +6,10 @@
     .controller('ModalController', ModalController);
 
   /** @ngInject */
-  function ModalController($scope, $modalInstance, currPiece) {
-    // var mod = this;
-    // console.log(this);
-    // console.log($modalInstance);
-    $scope.piece = currPiece.getCurrPiece();
+  function ModalController($scope, $modalInstance, item, ENDPOINT_URI) {
+
+    $scope.item = item.currPiece;
+    $scope.baseUri = ENDPOINT_URI;
 
     $scope.ok = function () {
       $modalInstance.close('ok');

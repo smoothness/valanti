@@ -1,7 +1,5 @@
 <div class="artist-detail-wrapper">
   <div class="container">
-  
-    <!-- {{adc.artist | json }} -->
 
     <div class="row detail-header">
       <div class="col-sm-3 col-md-2">
@@ -25,9 +23,9 @@
           <tab heading="Galería">
             <preloader ng-show="!adc.loaded"></preloader>
             <div ng-show="adc.loaded">
-<!--          <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.tiles">
+              <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.tiles">
                 <tile piece-data="tile"></tile>
-              </div> -->
+              </div>
             </div>
           </tab>
           <tab heading="Biografía">

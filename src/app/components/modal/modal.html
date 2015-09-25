@@ -6,17 +6,17 @@
 <div class="modal-body">
 	<div class="row">
 		<div class="col-md-8">
-			<img class="img-responsive" ng-src="{{ piece.baseURL }}{{ piece.pieceData.imagen }}" alt="{{ piece.pieceData.nombreArtista }} | {{ piece.pieceData.titulo }}">
+			<img class="img-responsive" ng-src="{{ baseUri }}{{ item.imagen }}" alt="{{ item.nombreArtista }} | {{ item.titulo }}">
 		</div>
 		<div class="col-md-4">
-		  <h2>{{ piece.pieceData.nombreArtista }}</h2>
-		  <h1>"{{ piece.pieceData.titulo }}"</h1>
-		  <p>{{ piece.pieceData.altura }} x {{ piece.pieceData.ancho }} cms.<br>
-		  {{ piece.pieceData.ano }}<br>
-		  {{ piece.pieceData.tecnica }}</p>
+		  <h2>{{ item.nombreArtista }}</h2>
+		  <h1>"{{ item.titulo }}"</h1>
+		  <p>{{ item.altura }} x {{ item.ancho }} cms.<br>
+		  {{ item.ano }}<br>
+		  {{ item.tecnica }}</p>
 		  <a class="btn btn-default text-uppercase" href="#">Solicitar información</a>
 		  <p><small>Favor <a href="#">contacte</a> la galería para solicitar precios</small></p>
-		  <p><small><a href="#">Regresar a obras del artista</a></small></p>
+		  <!-- <p><small><a href="#">Regresar a obras del artista</a></small></p> -->
 	  </div>
 	</div>
 </div>

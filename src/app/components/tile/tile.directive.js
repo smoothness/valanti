@@ -15,29 +15,17 @@
         'openModal': '&'
       },
       controller: TileController,
-      controllerAs: 'tile',
+      controllerAs: 'tc',
       bindToController: true
     };
 
     return directive;
 
-    /** @ngInject */
     function TileController(ENDPOINT_URI, HomeTilesModel) {
 
-    //   var ctrl = this;
-    //   ctrl.baseUri = ENDPOINT_URI;
-    //   // ctrl.currPiece = currPiece;
-    //   // ctrl.currArtist = currArtist;
-    //   // ctrl.allArtists;
+      var ctrl = this;
 
-    //   ctrl.getHomeTiles = function() {
-    //     HomeTilesModel.getHomeTiles()
-    //     .then(function (result) {
-    //       ctrl.homeTiles = (result !== 'null') ? result : {};
-    //     });  
-    //   };
-
-    //   ctrl.getHomeTiles();
+      ctrl.baseUri = ENDPOINT_URI;
 
     }
 
