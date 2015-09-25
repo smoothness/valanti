@@ -21,11 +21,13 @@
 
     return directive;
 
+    TileController.$inject = ['ENDPOINT_URI'];
+
     function TileController(ENDPOINT_URI) {
 
-      var ctrl = this;
+      var tc = this;
 
-      ctrl.baseUri = ENDPOINT_URI;
+      tc.baseUri = ENDPOINT_URI;
 
     }
 

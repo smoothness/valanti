@@ -5,7 +5,7 @@
     .module('valanti')
     .service('HomeTilesModel', HomeTilesModel);
 
-  // HomeTilesModel.$inject = ['$http, ENDPOINT_URI'];
+  HomeTilesModel.$inject = ['$http', 'ENDPOINT_URI'];
 
   function HomeTilesModel($http, ENDPOINT_URI) {
 

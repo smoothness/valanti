@@ -17,6 +17,8 @@
 
     return directive;
 
+    MainCarouselController.$inject = ['SlidesModel', 'ENDPOINT_URI'];
+
     function MainCarouselController(SlidesModel, ENDPOINT_URI) {
 
       var ctrl = this;

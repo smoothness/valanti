@@ -17,6 +17,8 @@
 
     return directive;
 
+    MainFooterController.$inject = [];
+
     function MainFooterController() {
 
       var mfooter = this;

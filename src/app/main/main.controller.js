@@ -5,7 +5,8 @@
     .module('valanti')
     .controller('MainController', MainController);
 
-  /** @ngInject */
+  MainController.$inject = ['$modal', 'HomeTilesModel', 'ENDPOINT_URI'];
+
   function MainController($modal, HomeTilesModel, ENDPOINT_URI) {
     var ctrl = this;
 

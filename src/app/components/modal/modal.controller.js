@@ -5,7 +5,8 @@
     .module('valanti')
     .controller('ModalController', ModalController);
 
-  /** @ngInject */
+  ModalController.$inject = ['$scope', '$modalInstance', 'item', 'ENDPOINT_URI'];
+
   function ModalController($scope, $modalInstance, item, ENDPOINT_URI) {
 
     $scope.item = item.currPiece;

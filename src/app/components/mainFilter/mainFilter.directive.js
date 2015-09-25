@@ -17,6 +17,8 @@
 
     return directive;
 
+    MainFilterController.$inject = [];
+
     function MainFilterController() {
 
       var mfilter = this;

@@ -5,7 +5,7 @@
 		.module('valanti')
 		.service('ArtistsModel', ArtistsModel);
 
-	// ArtistsModel.$inject = ['$http, ENDPOINT_URI'];
+	ArtistsModel.$inject = ['$http', 'ENDPOINT_URI'];
 
 	function ArtistsModel($http, ENDPOINT_URI) {
 

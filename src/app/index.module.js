@@ -7,5 +7,6 @@
     	'ui.router', 
     	'ngAnimate', 
     	'ui.bootstrap',
-    	'ngSanitize']);    
+    	'ngSanitize'
+    	]);    
 })();

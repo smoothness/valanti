@@ -18,7 +18,8 @@
 
     return directive;
 
-    /** @ngInject */
+    PreloaderController.$inject = [];
+
     function PreloaderController() {
       var preloader = this;
     }

@@ -17,7 +17,8 @@
 
     return directive;
 
-    /** @ngInject */
+    MainHeaderController.$inject = [];
+
     function MainHeaderController() {
 
       var mheader = this;

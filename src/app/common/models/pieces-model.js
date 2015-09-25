@@ -5,7 +5,7 @@
 		.module('valanti')
 		.service('PiecesModel', PiecesModel);
 
-	// PiecesModel.$inject = ['$http, ENDPOINT_URI'];
+	PiecesModel.$inject = ['$http', 'ENDPOINT_URI'];
 
 	function PiecesModel($http, ENDPOINT_URI) {
 

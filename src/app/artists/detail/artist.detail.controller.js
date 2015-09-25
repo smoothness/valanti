@@ -5,7 +5,7 @@
     .module('valanti')
     .controller('ArtistDetailController', ArtistDetailController);
 
-  // ArtistDetailController.$inject = ['dependencies'];
+  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal'];
 
   function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal) {
     

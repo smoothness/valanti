@@ -5,7 +5,7 @@
     .module('valanti')
     .service('SlidesModel', SlidesModel);
 
-  // NameService.$inject = ['dependencies'];
+  SlidesModel.$inject = ['$http', 'ENDPOINT_URI'];
 
   function SlidesModel($http, ENDPOINT_URI) {
 

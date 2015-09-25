@@ -5,7 +5,7 @@
     .module('valanti')
     .controller('ArtistsController', ArtistsController);
 
-  // ArtistsController.$inject = [''];
+  ArtistsController.$inject = ['ArtistsModel', 'ENDPOINT_URI'];
 
   function ArtistsController(ArtistsModel, ENDPOINT_URI) {
 
