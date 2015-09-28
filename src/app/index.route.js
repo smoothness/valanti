@@ -27,6 +27,12 @@
         templateUrl: 'app/artists/detail/artist.detail.html',
         controller: 'ArtistDetailController',
         controllerAs: 'adc'
+      })
+      .state('expos', {
+        url: '/expos',
+        templateUrl: 'app/expos/expos.html',
+        controller: 'ExposController',
+        controllerAs: 'ec'
       });
 
     // for any unmatched url
