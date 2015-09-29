@@ -3,17 +3,28 @@
   <div class="container">
     <div>
       <div class="row">
-        <div class="col-xs-12 gallery-tiles">
+        <div class="col-xs-12">
           <preloader ng-show="!ec.loaded"></preloader>
           <div ng-repeat="expo in ec.expos" ng-show="ec.loaded" class="col-md-6 expo">
             <div class="banner">
-            	<img src="{{ENDPOINT_URI}}{{ expo.imagen }}" alt="{{ expo.titulo }} por {{ expo.artistas }}">
+            	<!-- <img src="{{ENDPOINT_URI}}{{ expo.imagen }}" alt="{{ expo.titulo }} por {{ expo.artistas }}"> -->
+              <img class="img-responsive" src="assets/images/expo-banner-placeholder.png" alt="">
             </div>
-            <h2>{{ expo.titulo }}</h2>
-            <h4>{{ expo.artistas }}</h4>
-            <p>{{ expo.descripcion }}</p>
-            <p>{{ expo.lugar }}</p>
-            <p>{{ expo.fecha }}</p>
+            <div class="content">
+              <h2>{{ expo.titulo }}</h2>
+              <h4>Artista: <strong>{{ expo.artistas }}</strong></h4>
+              <p>{{ expo.descripcion }}</p>
+            </div>
+            <div class="footer">
+              <div class="row">
+                <div class="col-md-6">
+                  <p><strong>Lugar: </strong>{{ expo.lugar }}</p>    
+                </div>
+                <div class="col-md-6">
+                  <p><strong>Fecha: </strong>{{ expo.fecha }}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -28,6 +28,18 @@
         controller: 'ArtistDetailController',
         controllerAs: 'adc'
       })
+      .state('galeria', {
+        url: '/galeria',
+        templateUrl: 'app/galeria/galeria.html',
+        controller: 'GaleriaController',
+        controllerAs: 'gc'
+      })
+      .state('servicios', {
+        url: '/servicios',
+        templateUrl: 'app/servicios/servicios.html',
+        controller: 'ServiciosController',
+        controllerAs: 'sc'
+      })
       .state('expos', {
         url: '/expos',
         templateUrl: 'app/expos/expos.html',
