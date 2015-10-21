@@ -12,12 +12,12 @@
               <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
             </div>
             <div ng-if="artist.imagen">
-              <img class="img-responsive" ng-src="{{ ac.baseUri }}{{ artist.imagen }}" alt="{{ artist.nombreCompleto }}">
+              <img ng-click="go('/artists/' + artist.idArtista)" class="img-responsive" ng-src="{{ ac.baseUri }}{{ artist.imagen }}" alt="{{ artist.nombreCompleto }}">
             </div>
 
             <div class="caption">
-              <h4 class="text-uppercase">{{ artist.nombreCompleto }}</h4>
-              <a ng-href="/artists/{{ artist.idArtista }}" class="btn btn-default text-uppercase" role="button">Ver</a>
+              <h5 class="text-uppercase">{{ artist.nombreCompleto }}</h5>
+              <a ng-href="/artists/{{ artist.idArtista }}" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">Ver Obras</a>
             </div>
 
           </div>

@@ -1,4 +1,4 @@
-<div class="tile">
+  <div class="tile">
 
 	<div ng-if="!tc.pieceData.thumb">
     <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
@@ -12,8 +12,9 @@
     	<a ng-href="/artists/{{ tc.pieceData.idArtista }}">{{ tc.pieceData.nombreArtista }}</a>
     </h5>
     <h4 class="text-uppercase">{{ tc.pieceData.titulo }}</h4>
-    <p class="description">{{ tc.pieceData.tecnica }} <br /> <small>Alto: {{ tc.pieceData.altura }} cms / Ancho: {{ tc.pieceData.ancho }} cms</small></p>
-    <a ng-click="tc.openModal();" class="btn btn-default text-uppercase pull-right" role="button">Ver</a>
+    <p class="description"><strong>Técnica:&nbsp;</strong>{{ tc.pieceData.tecnica }} <br />
+    <small><strong>Alto:&nbsp;</strong>{{ tc.pieceData.altura }} cms / <strong>Ancho:&nbsp;</strong>{{ tc.pieceData.ancho }} cms</small></p>
+    <a ng-click="tc.openModal();" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">Ver Información</a>
   </div>
 
 </div>
