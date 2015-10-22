@@ -4,8 +4,9 @@
       <div class="col-xs-12 gallery-tiles">
 
         <preloader ng-show="!ac.loaded"></preloader>
-
+        
         <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists" ng-show="ac.loaded">
+        {{ ac.artists | json }}
           <div class="tile">
 
             <div ng-if="!artist.imagen">

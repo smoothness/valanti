@@ -3,31 +3,21 @@
   padding: 30px 0;
   margin-bottom: 50px;
   color: white;
-  .filter-select {
-    margin-bottom: 10px;
-  }
-  label {
-    font-weight: normal;
-    margin-top: 5px;
-    text-transform: uppercase;
-  }
+  // .filter-select {
+  //   margin-bottom: 10px;
+  // }
+  // label {
+  //   font-weight: normal;
+  //   margin-top: 5px;
+  //   text-transform: uppercase;
+  // }
   select {
-    float: right;
-    min-width: 220px;
-    height: 30px;
-    -webkit-appearance: none;
-    @include border-radius(0);
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
     &:after {
       content: '\e114';
       color: black;
-    }
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .gallery-filter {
-    .filter-select {
-      margin-bottom: 0;
     }
   }
 }

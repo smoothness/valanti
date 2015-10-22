@@ -1,18 +1,25 @@
 <div class="gallery-filter">
+
+
   <div class="container">
-    <div class="row">
-      <div class="filter-select col-sm-4 col-xs-12">
-        <label for="artista-filter">Artista: </label>
-        <select name="artista-filter" id="artista-filter"></select>
-      </div>
-      <div class="filter-select col-sm-4 col-xs-12">
-        <label for="estilo-filter">Estilo: </label>
-        <select name="estilo-filter" id="estilo-filter"></select>
-      </div>
-      <div class="filter-select col-sm-4 col-xs-12">
-        <label for="tecnica-filter">Tecnica: </label>
-        <select name="tecnica-filter" id="tecnica-filter"></select>
-      </div>
+    <div class="col-md-4">
+      <select class="form-control input-sm" ng-model="search.nombreArtista">
+        <option value="">Buscar por Artista</option>
+        <option value="{{ artist }}" ng-repeat="artist in main.allArtistNames">{{ artist }}</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control input-sm" ng-model="search.tipo">
+        <option value="">Buscar por Tipo de Obra</option>
+        <option value="{{ type }}" ng-repeat="type in main.allPieceTypes">{{ type }}</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control input-sm" ng-model="search.tecnica">
+        <option value="">Buscar por Técnica</option>
+        <option value="{{ technique }}" ng-repeat="technique in main.allTechniques">{{ technique }}</option>
+      </select>
     </div>
   </div>
+
 </div>

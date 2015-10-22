@@ -7,8 +7,12 @@
           <preloader ng-show="!ec.loaded"></preloader>
           <div ng-repeat="expo in ec.expos" ng-show="ec.loaded" class="col-md-6 expo">
             <div class="banner">
-            	<!-- <img src="{{ENDPOINT_URI}}{{ expo.imagen }}" alt="{{ expo.titulo }} por {{ expo.artistas }}"> -->
-              <img class="img-responsive" src="assets/images/expo-banner-placeholder.png" alt="">
+              <div ng-if="!expo.imagen">
+                <img class="img-responsive" src="assets/images/expo-banner-placeholder.jpg" alt="Exposiciones / Galería Valanti">
+              </div>
+              <div ng-if="expo.imagen">
+            	  <img src="{{ENDPOINT_URI}}{{ expo.imagen }}" alt="{{ expo.titulo }} por {{ expo.artistas }}">
+              </div>
             </div>
             <div class="content">
               <h2>{{ expo.titulo }}</h2>

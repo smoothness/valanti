@@ -45,6 +45,12 @@
         templateUrl: 'app/expos/expos.html',
         controller: 'ExposController',
         controllerAs: 'ec'
+      })
+      .state('como-comprar', {
+        url: '/como-comprar',
+        templateUrl: 'app/comoComprar/comoComprar.html',
+        controller: 'ComoComprarController',
+        controllerAs: 'ccc'
       });
 
     // for any unmatched url
