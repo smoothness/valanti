@@ -5,14 +5,30 @@
     .module('valanti')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$modal', 'HomeTilesModel', 'ENDPOINT_URI'];
+  MainController.$inject = ['$modal', 'HomeTilesModel', 'SlidesModel', 'ENDPOINT_URI'];
 
-  function MainController($modal, HomeTilesModel, ENDPOINT_URI) {
+  function MainController($modal, HomeTilesModel, SlidesModel, ENDPOINT_URI) {
     
     var ctrl = this;
 
     ctrl.loaded = false;  
     ctrl.baseUri = ENDPOINT_URI;
+
+    ctrl.myInterval = 10000;
+
+    /**
+     * Calls all slides service for main home carousel
+     * @return slides array of objects
+     */
+    ctrl.allSlides = function() {
+      SlidesModel.getSlides()
+      .then(function (result) {
+        ctrl.slides = (result !== 'null') ? result : {};
+      });  
+    };
+
+    ctrl.allSlides();
+
 
     // function to call service to get all home tile pieces
     ctrl.getHomeTiles = function() {

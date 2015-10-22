@@ -1,6 +1,27 @@
 <div>
 
-  <main-carousel open-modal="main.open({ currPiece: mcarousel.slide })"></main-carousel>
+  <div class="container">
+    <carousel interval="main.myInterval" no-wrap="noWrapSlides">
+      <slide ng-repeat="slide in main.slides" active="slide.active">
+        <slide-item>
+          <div class="thumbnail">
+            <div class="row">
+              <div class="col-xs-8">
+                <img ng-click="main.open({ currPiece: slide });" class="img-responsive" ng-src="{{ main.baseUri }}{{ slide.imagen }}">
+              </div>
+              <div class="col-xs-4">
+                <div class="caption text-right">
+                  <h3 class="text-uppercase"><a ng-click="$root.go('/artists/' + slide.idArtista)" class="text-uppercase">{{ slide.nombreArtista }}</a></h3>
+                  <h2 class="text-uppercase">{{ slide.titulo }}</h2>
+                  <p>{{ slide.tecnica }} <br /> <small>{{ slide.altura }} x {{ slide.ancho }} cms</small></p>
+                  <p><a ng-click="$root.go('/artists/' + slide.idArtista)" class="text-uppercase">Otras Obras de {{ slide.nombreArtista }}</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </slide>
+    </carousel>
+  </div>
 
   <main-filter></main-filter>
 
