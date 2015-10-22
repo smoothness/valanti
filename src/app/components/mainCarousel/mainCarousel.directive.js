@@ -10,6 +10,9 @@
       restrict: 'E',
       replace: false,
       templateUrl: 'app/components/mainCarousel/mainCarousel.html',
+      scope: {
+        'openModal': '&'
+      },
       controller: MainCarouselController,
       controllerAs: 'mcarousel',
       bindToController: true

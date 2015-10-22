@@ -5,14 +5,14 @@
       <div class="thumbnail">
         <div class="row">
           <div class="col-xs-8">
-            <img class="img-responsive" ng-src="{{ mcarousel.baseUri }}{{ slide.imagen }}">
+            <img ng-click="mcarousel.openModal();" class="img-responsive" ng-src="{{ mcarousel.baseUri }}{{ slide.imagen }}">
           </div>
           <div class="col-xs-4">
             <div class="caption text-right">
-              <h3 class="text-uppercase">{{ slide.nombreArtista }}</h3>
+              <h3 class="text-uppercase"><a ng-click="$root.go('/artists/' + slide.idArtista)" class="text-uppercase">{{ slide.nombreArtista }}</a></h3>
               <h2 class="text-uppercase">{{ slide.titulo }}</h2>
               <p>{{ slide.tecnica }} <br /> <small>{{ slide.altura }} x {{ slide.ancho }} cms</small></p>
-              <p><a ng-click="go('/artists/' + slide.idArtista)" class="text-uppercase" role="button">Otras Obras de {{ slide.nombreArtista }}</a></p>
+              <p><a ng-click="$root.go('/artists/' + slide.idArtista)" class="text-uppercase">Otras Obras de {{ slide.nombreArtista }}</a></p>
             </div>
           </div>
         </div>
