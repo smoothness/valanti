@@ -1,25 +1,22 @@
 <div class="gallery-filter">
-
-
   <div class="container">
     <div class="col-md-4">
-      <select class="form-control input-sm" ng-model="search.nombreArtista">
+      <select class="form-control input-sm" ng-model="search.nombreArtista" ng-change="main.updateModel()">
         <option value="">Buscar por Artista</option>
         <option value="{{ artist }}" ng-repeat="artist in main.allArtistNames">{{ artist }}</option>
       </select>
     </div>
     <div class="col-md-4">
-      <select class="form-control input-sm" ng-model="search.tipo">
+      <select class="form-control input-sm" ng-model="search.tipo" ng-change="main.updateModel()">
         <option value="">Buscar por Tipo de Obra</option>
         <option value="{{ type }}" ng-repeat="type in main.allPieceTypes">{{ type }}</option>
       </select>
     </div>
     <div class="col-md-4">
-      <select class="form-control input-sm" ng-model="search.tecnica">
+      <select class="form-control input-sm" ng-model="search.tecnica" ng-change="main.updateModel()"">
         <option value="">Buscar por Técnica</option>
         <option value="{{ technique }}" ng-repeat="technique in main.allTechniques">{{ technique }}</option>
       </select>
     </div>
   </div>
-
 </div>

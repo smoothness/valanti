@@ -24,6 +24,23 @@
 
     ctrl.getArtists();
 
+    /**
+     * Get the names of all the artists and make an array of names
+     * to populate the select options for the filters 
+     * @return {[array]} array of strings
+     */
+    ctrl.getAllArtistNames = function() {
+      ArtistsModel.all()
+      .then(function(result) {
+        var justNames = result.map(function(obj){ 
+           return obj.nombreCompleto;
+        });
+        ctrl.allArtistNames = justNames;
+      });
+    };
+
+    ctrl.getAllArtistNames();
+
   }
 
 })();

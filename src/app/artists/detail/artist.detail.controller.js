@@ -11,7 +11,7 @@
     
     var ctrl = this;
     var artistId = $stateParams.id;
-
+    
     ctrl.loaded = false;
     ctrl.baseUri = ENDPOINT_URI;
 
@@ -42,6 +42,8 @@
         });
     };
 
+    ctrl.getArtist();
+
     // get pieces by artist
     ctrl.getPiecesByArtist = function() {
       PiecesModel.fetchByArtist(artistId)
@@ -51,7 +53,6 @@
         });
     };
 
-    ctrl.getArtist();
     ctrl.getPiecesByArtist();
 
   }

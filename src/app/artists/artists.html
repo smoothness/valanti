@@ -1,11 +1,24 @@
+<div class="gallery-filter gallery-filter-artists">
+   <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <select class="form-control input-sm" ng-model="search.nombreCompleto">
+          <option value="">Buscar por Artista</option>
+          <option value="{{ artist }}" ng-repeat="artist in ac.allArtistNames">{{ artist }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container artists">
-  <div>
+
     <div class="row">
       <div class="col-xs-12 gallery-tiles">
-
+        
         <preloader ng-show="!ac.loaded"></preloader>
         
-        <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists" ng-show="ac.loaded">
+        <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists | filter: search" ng-show="ac.loaded">
           <div class="tile">
 
             <div ng-if="!artist.imagen">
@@ -25,5 +38,5 @@
 
       </div>
     </div>
-  </div>
+
 </div>

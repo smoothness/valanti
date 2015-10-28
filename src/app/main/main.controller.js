@@ -13,8 +13,18 @@
 
     ctrl.loaded = false;  
     ctrl.baseUri = ENDPOINT_URI;
-
+    ctrl.usedFilter = false;
     ctrl.myInterval = 10000;
+    ctrl.homeTiles = [];
+
+    /**
+     * Update Model
+     * This function updates the model from the main tiles
+     * when the filter selects have been changed
+     */
+    ctrl.updateModel = function() {
+      ctrl.homeTiles = ctrl.allPieces;
+    };
 
     /**
      * Calls all slides service for main home carousel
@@ -29,8 +39,24 @@
 
     ctrl.allSlides();
 
+    /**
+     * getAllPieces, total piece items from services
+     * @return {[array of objects]} 
+     */
+    ctrl.getAllPieces = function() {
+      PiecesModel.all()
+      .then(function(result){
+        ctrl.allPieces = (result !== 'null') ? result : {};
+      });
+    };
 
-    // function to call service to get all home tile pieces
+    ctrl.getAllPieces();
+
+    /**
+     * getHomeTiles gets all the featured pieces for the initial
+     * tile setup
+     * @return {Array of objects}
+     */
     ctrl.getHomeTiles = function() {
       HomeTilesModel.getHomeTiles()
       .then(function(result) {

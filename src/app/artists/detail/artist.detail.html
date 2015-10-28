@@ -24,7 +24,7 @@
 
             <preloader ng-show="!adc.loaded"></preloader>
             <div ng-show="adc.loaded">
-              <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.piecesByArtist">
+              <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="tile in adc.piecesByArtist" >
                 <tile piece-data="tile" open-modal="adc.open({ currPiece: tile })"></tile>
               </div>
             </div>
