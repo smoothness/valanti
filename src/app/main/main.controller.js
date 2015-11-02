@@ -5,9 +5,9 @@
     .module('valanti')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$modal', 'HomeTilesModel', 'SlidesModel', 'ArtistsModel', 'PiecesModel', 'ENDPOINT_URI'];
+  MainController.$inject = ['$modal', 'HomeTilesModel', 'SlidesModel', 'ArtistsModel', 'PiecesModel', 'ENDPOINT_URI', 'MiscServices', '$scope'];
 
-  function MainController($modal, HomeTilesModel, SlidesModel, ArtistsModel, PiecesModel, ENDPOINT_URI) {
+  function MainController($modal, HomeTilesModel, SlidesModel, ArtistsModel, PiecesModel, ENDPOINT_URI, MiscServices, $scope) {
     
     var ctrl = this;
 
@@ -16,6 +16,18 @@
     ctrl.usedFilter = false;
     ctrl.myInterval = 10000;
     ctrl.homeTiles = [];
+
+    // control language
+    ctrl.lang;
+
+    $scope.$watch(
+      function watchLang($scope){
+        return(ctrl.lang = MiscServices.getLanguage());
+      },
+      function(newValue, oldValue){
+        // console.log("ctrl.lang: ", newValue);
+      }
+    );
 
     /**
      * Update Model

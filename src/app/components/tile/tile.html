@@ -1,5 +1,4 @@
-<div class="tile">
-
+<div class="tile" ng-class="{ 'sold': tc.pieceData.vendida == 1 }">
 	<div ng-if="!tc.pieceData.thumb">
     <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
 	</div>

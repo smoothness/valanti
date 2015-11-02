@@ -46,10 +46,16 @@
         controller: 'ExposController',
         controllerAs: 'ec'
       })
-      .state('como-comprar', {
-        url: '/como-comprar',
-        templateUrl: 'app/comoComprar/comoComprar.html',
-        controller: 'ComoComprarController',
+      .state('cursos', {
+        url: '/cursos',
+        templateUrl: 'app/cursos/cursos.html',
+        controller: 'CursosController',
+        controllerAs: 'cc'
+      })
+      .state('contacto', {
+        url: '/contacto',
+        templateUrl: 'app/contacto/contacto.html',
+        controller: 'ContactoController',
         controllerAs: 'ccc'
       });
 

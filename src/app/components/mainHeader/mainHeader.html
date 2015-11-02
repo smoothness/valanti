@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <a href="#" class="pull-right lang-btn">English</a>
+        <a ng-click="mheader.switchLang()" class="pull-right lang-btn">{{ mheader.lang == 'sp' ? 'English' : 'Spanish' }}</a>
       </div>
     </div>
     <h1 class="text-center">
@@ -23,17 +23,35 @@
         </button>
       </div>
       <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav text-uppercase">
+        <!-- Spanish menu block -->
+        <ul class="nav navbar-nav text-uppercase" ng-if="mheader.lang == 'sp'">
           <li><a href="/galeria">La Galer&iacute;a</a></li>
           <li><a href="/artists">Artistas</a></li>
           <li><a href="/servicios">Servicios</a></li>
           <li><a href="/expos">Exposiciones</a></li>
           <li><a href="/cursos">Cursos</a></li>
-          <li><a href="/como-comprar">C&oacute;mo comprar</a></li>
+          <li><a href="/contacto">Contáctenos</a></li>
           <li class="social">
             <ul>
               <!-- <li><a href="#" class="pull-right social-btn"><i class="fa fa-search"></i></a></li> -->
               <li><a href="https://www.facebook.com/GaleriaValanti" class="pull-right social-btn" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+              <li><a href="https://instagram.com/galeriavalanti/" class="pull-right social-btn" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- English menu block -->
+        <ul class="nav navbar-nav text-uppercase" ng-if="mheader.lang == 'en'">
+          <li><a href="/galeria">The Gallery</a></li>
+          <li><a href="/artists">Artists</a></li>
+          <li><a href="/servicios">Services</a></li>
+          <li><a href="/expos">Expos</a></li>
+          <li><a href="/cursos">Courses</a></li>
+          <li><a href="/contacto">Contact Us</a></li>
+          <li class="social">
+            <ul>
+              <!-- <li><a href="#" class="pull-right social-btn"><i class="fa fa-search"></i></a></li> -->
+              <li><a href="https://www.facebook.com/GaleriaValanti" class="pull-right social-btn" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+              <li><a href="https://instagram.com/galeriavalanti/" class="pull-right social-btn" target="_blank"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </li>
         </ul>

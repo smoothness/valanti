@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-md-12">
         <select class="form-control input-sm" ng-model="search.nombreCompleto">
-          <option value="">Buscar por Artista</option>
+          <option value="" ng-if="ac.lang == 'sp'">Buscar por Artista</option>
+          <option value="" ng-if="ac.lang == 'en'">Search by Artist</option>
           <option value="{{ artist }}" ng-repeat="artist in ac.allArtistNames">{{ artist }}</option>
         </select>
       </div>
@@ -30,7 +31,8 @@
 
             <div class="caption">
               <h5 class="text-uppercase">{{ artist.nombreCompleto }}</h5>
-              <a ng-href="/artists/{{ artist.idArtista }}" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">Ver Obras</a>
+              <a ng-if="ac.lang == 'sp'" ng-href="/artists/{{ artist.idArtista }}" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">Ver Obras</a>
+              <a ng-if="ac.lang == 'en'" ng-href="/artists/{{ artist.idArtista }}" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">Watch Gallery</a>
             </div>
 
           </div>

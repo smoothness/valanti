@@ -17,11 +17,24 @@
 
     return directive;
 
-    MainHeaderController.$inject = [];
+    MainHeaderController.$inject = ['MiscServices', '$scope'];
 
-    function MainHeaderController() {
+    function MainHeaderController(MiscServices, $scope) {
 
       var mheader = this;
+
+      mheader.lang;
+      mheader.switchLang = MiscServices.switchLanguage;
+
+      $scope.$watch(
+        function watchLang($scope){
+          return(mheader.lang = MiscServices.getLanguage());
+        },
+        function(newValue, oldValue){
+          // console.log("mheader.lang: ", newValue);
+        }
+      );
+
 
     }
   }

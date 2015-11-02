@@ -5,11 +5,23 @@
 	  .module('valanti')
 	  .controller('ExposController', ExposController);
 
-	ExposController.$inject = ['ExposModel', 'ENDPOINT_URI'];
+	ExposController.$inject = ['ExposModel', 'ENDPOINT_URI', '$scope', 'MiscServices'];
 
-	function ExposController(ExposModel, ENDPOINT_URI) {
+	function ExposController(ExposModel, ENDPOINT_URI, $scope, MiscServices) {
 		
 		var ctrl = this;
+
+    // control language
+    ctrl.lang;
+
+    $scope.$watch(
+      function watchLang($scope){
+        return(ctrl.lang = MiscServices.getLanguage());
+      },
+      function(newValue, oldValue){
+        // console.log("ctrl.lang: ", newValue);
+      }
+    );
 
     ctrl.loaded = false;  
     ctrl.baseUri = ENDPOINT_URI;

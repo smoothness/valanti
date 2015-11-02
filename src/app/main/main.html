@@ -7,7 +7,7 @@
         <slide-item>
           <div class="thumbnail">
             <div class="row">
-              <div class="col-xs-8">
+              <div class="col-xs-8 slideImg ng-class="{ 'sold': slide.vendida == 1 }"">
                 <img ng-click="main.open({ currPiece: slide });" class="img-responsive" ng-src="{{ main.baseUri }}{{ slide.imagen }}">
               </div>
               <div class="col-xs-4">

@@ -5,11 +5,23 @@
     .module('valanti')
     .controller('ArtistsController', ArtistsController);
 
-  ArtistsController.$inject = ['ArtistsModel', 'ENDPOINT_URI'];
+  ArtistsController.$inject = ['ArtistsModel', 'ENDPOINT_URI', '$scope', 'MiscServices'];
 
-  function ArtistsController(ArtistsModel, ENDPOINT_URI) {
+  function ArtistsController(ArtistsModel, ENDPOINT_URI, $scope, MiscServices) {
 
     var ctrl = this;
+
+    // control language
+    ctrl.lang;
+
+    $scope.$watch(
+      function watchLang($scope){
+        return(ctrl.lang = MiscServices.getLanguage());
+      },
+      function(newValue, oldValue){
+        // console.log("ctrl.lang: ", newValue);
+      }
+    );
 
     ctrl.loaded = false;
     ctrl.baseUri = ENDPOINT_URI;

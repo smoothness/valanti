@@ -10,21 +10,41 @@
         </h1>
       </div>
       <div class="col-xs-12">
-        <ul class="nav text-uppercase">
+
+        <!-- Spanish menu block -->
+        <ul class="nav text-uppercase" ng-if="mfooter.lang == 'sp'">
           <li><a href="/">Inicio</a></li>
           <li><a href="/galeria">La Galer&iacute;a</a></li>
           <li><a href="/artists">Artistas</a></li>
           <li><a href="/servicios">Servicios</a></li>
           <li><a href="/expos">Exposiciones</a></li>
           <li><a href="/cursos">Cursos</a></li>
-          <li><a href="/como-comprar">C&oacute;mo comprar</a></li>
+          <li><a href="/contacto">Contáctenos</a></li>
         </ul>
+
+        <!-- English menu block -->
+        <ul class="nav text-uppercase" ng-if="mfooter.lang == 'en'">
+          <li><a href="/galeria">The Gallery</a></li>
+          <li><a href="/artists">Artists</a></li>
+          <li><a href="/servicios">Services</a></li>
+          <li><a href="/expos">Expos</a></li>
+          <li><a href="/cursos">Courses</a></li>
+          <li><a href="/contacto">Contact Us</a></li>
+        </ul>
+
       </div>
       <div class="col-xs-12">
-        <div class="contact">
+        <!-- Spanish block -->
+        <div class="contact" ng-if="mfooter.lang == 'sp'">
           <p>Galer&iacute;a Valanti, galer&iacute;a de arte latinoamericano, San Jos&eacute;, Costa Rica.</p>
           <p>Tel: <a href="tel:(506)2253-1659">(506)2253-1659</a><br> Email: <a href="mailto:info@galeriavalanti.com">info@galeriavalanti.com</a></p>
-          <p class="small">2015 - Galería Valanti, todos los derechos reservados</p>
+          <p class="small">2015 - Galería Valanti, todos los derechos reservados.</p>
+        </div>
+        <!-- English block -->
+        <div class="contact" ng-if="mfooter.lang == 'en'">
+          <p>Galer&iacute;a Valanti, latinamerican art gallery, San Jos&eacute;, Costa Rica.</p>
+          <p>Phone: <a href="tel:(506)2253-1659">(506)2253-1659</a><br> Email: <a href="mailto:info@galeriavalanti.com">info@galeriavalanti.com</a></p>
+          <p class="small">2015 - Galería Valanti, all rigths reserved.</p>
         </div>
       </div>
     </div>

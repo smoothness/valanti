@@ -4,6 +4,10 @@
   border-bottom: 2px solid $lines-border-color;
   background-color: $header-background-color;
   padding-top: 10px;
+
+  .lang-btn {
+    cursor: pointer;
+  }
   
   .navbar-default {
     background-color: transparent;

@@ -17,11 +17,23 @@
 
     return directive;
 
-    MainFooterController.$inject = [];
+    MainFooterController.$inject = ['$scope', 'MiscServices'];
 
-    function MainFooterController() {
+    function MainFooterController($scope, MiscServices) {
 
       var mfooter = this;
+
+      // control language
+      mfooter.lang;
+
+      $scope.$watch(
+        function watchLang($scope){
+          return(mfooter.lang = MiscServices.getLanguage());
+        },
+        function(newValue, oldValue){
+          // console.log("ctrl.lang: ", newValue);
+        }
+      );
 
     }
   }

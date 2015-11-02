@@ -5,9 +5,22 @@
 	  .module('valanti')
 	  .controller('ServiciosController', ServiciosController);
 
-	ServiciosController.$inject = ['dependencies'];
+	ServiciosController.$inject = ['MiscServices', '$scope'];
 
-	function ServiciosController(dependencies) {
-		//content
+	function ServiciosController(MiscServices, $scope) {
+		
+		var ctrl = this;
+
+    // control language
+    ctrl.lang;
+
+    $scope.$watch(
+      function watchLang($scope){
+        return(ctrl.lang = MiscServices.getLanguage());
+      },
+      function(newValue, oldValue){
+        // console.log("ctrl.lang: ", newValue);
+      }
+    );
 	}
 })();

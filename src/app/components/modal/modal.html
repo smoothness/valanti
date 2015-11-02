@@ -5,7 +5,7 @@
 
 <div class="modal-body">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-8 modalImg" ng-class="{ 'sold': item.vendida == 1 }">
 			<img class="img-responsive" ng-src="{{ baseUri }}imgd.php?q=50&w=800&src={{ item.imagen }}" alt="{{ item.nombreArtista }} | {{ item.titulo }}">
 
 			<!-- http://www.galeriavalanti.com/imgd.php?q=50&w=800&src=/data/images/obras/54.jpg -->
@@ -16,8 +16,8 @@
 		  <p>{{ item.altura }} x {{ item.ancho }} cms.<br>
 		  {{ item.ano }}<br>
 		  {{ item.tecnica }}</p>
-		  <a class="btn btn-default text-uppercase hvr-sweep-to-bottom" href="mailto:info@galeriavalanti.com">Solicitar información</a>
-		  <p><small>Favor <a href="mailto:inf@galeriavalanti.com">contacte</a> la galería para solicitar precios</small></p>
+		  <a class="btn btn-default text-uppercase hvr-sweep-to-bottom" href="mailto:inf@galeriavalanti.com?subject=Deseo información sobre una obra&body=Obra: {{item.titulo}}, Artista: {{item.nombreArtista}}">Solicitar información</a>
+		  <p><small>Favor <a href="mailto:inf@galeriavalanti.com?subject=Deseo información sobre una obra&body=Obra: {{item.titulo}}, Artista: {{item.nombreArtista}}">contacte</a> la galería para solicitar precios</small></p>
 		  <!-- <p><small><a href="#">Regresar a obras del artista</a></small></p> -->
 	  </div>
 	</div>
