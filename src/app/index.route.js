@@ -28,8 +28,8 @@
         controller: 'ArtistDetailController',
         controllerAs: 'adc'
       })
-      .state('galeria', {
-        url: '/galeria',
+      .state('nosotros', {
+        url: '/nosotros',
         templateUrl: 'app/galeria/galeria.html',
         controller: 'GaleriaController',
         controllerAs: 'gc'

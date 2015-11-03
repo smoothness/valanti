@@ -21,13 +21,24 @@
 
     return directive;
 
-    TileController.$inject = ['ENDPOINT_URI'];
+    TileController.$inject = ['ENDPOINT_URI', '$scope', 'MiscServices'];
 
-    function TileController(ENDPOINT_URI) {
+    function TileController(ENDPOINT_URI, $scope, MiscServices) {
 
       var tc = this;
 
       tc.baseUri = ENDPOINT_URI;
+
+      tc.lang;
+
+      $scope.$watch(
+        function watchLang($scope){
+          return(tc.lang = MiscServices.getLanguage());
+        },
+        function(newValue, oldValue){
+          // console.log("tc.lang: ", newValue);
+        }
+      );
 
     }
 

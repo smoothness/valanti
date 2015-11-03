@@ -3,15 +3,24 @@
   <div class="container">
     <div>
       <div class="row">
-        <div class="col-xs-12">
+        <!-- spanish block -->
+        <div class="col-xs-12" ng-if="ccc.lang == 'sp'">
           <h1>Contáctenos</h1>
           <img src="assets/images/galeria/lagaleria.jpg" alt="Galeria Valanti" class="righted-img">
-          
           <p><strong>Dirección: </strong>Calle 33 y 35, Ave. 11 #3395, Barrio Escalante, San José, Costa Rica.</p>
           <p><strong>Dirección Opcional: </strong>De la Plaza del Farolito, Barrio Escalante, 100mts. sur y 200mts. este.</p>
           <p><strong>E-mail: </strong><a href="mailto:info@galeriavalanti.com">info@galeriavalanti.com</a></p>
           <p><strong>Teléfono: </strong>(506)2253-1659.</p>
           <p><strong>Apdo: </strong>4273-1000 San José, Costa Rica</p>
+        </div>
+        <!-- english block -->
+        <div class="col-xs-12" ng-if="ccc.lang == 'en'">
+          <h1>Contact Us</h1>
+          <img src="assets/images/galeria/lagaleria.jpg" alt="Galeria Valanti" class="righted-img">
+          <p><strong>Address: </strong>33 & 35 Street, Ave. 11 #3395, Barrio Escalante, San José, Costa Rica.</p>
+          <p><strong>E-mail: </strong><a href="mailto:info@galeriavalanti.com">info@galeriavalanti.com</a></p>
+          <p><strong>Phone: </strong>(506)2253-1659.</p>
+          <p><strong>P.O. Box: </strong>4273-1000 San José, Costa Rica</p>
         </div>
       </div>
     </div>

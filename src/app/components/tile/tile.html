@@ -1,11 +1,10 @@
-<div class="tile" ng-class="{ 'sold': tc.pieceData.vendida == 1 }">
+<div class="tile" ng-class="{ 'sold': tc.pieceData.vendida == 1 }" ng-if="tc.lang == 'sp'">
 	<div ng-if="!tc.pieceData.thumb">
     <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
 	</div>
 	<div ng-if="tc.pieceData.thumb">	
   	<img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}{{ tc.pieceData.thumb }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
   </div>
-
   <div class="caption">
     <h5 class="text-uppercase">
     	<a ng-href="/artists/{{ tc.pieceData.idArtista }}">{{ tc.pieceData.nombreArtista }}</a>
@@ -15,5 +14,22 @@
     <small><strong>Alto:&nbsp;</strong>{{ tc.pieceData.altura }} cms / <strong>Ancho:&nbsp;</strong>{{ tc.pieceData.ancho }} cms</small></p>
     <a ng-click="tc.openModal();" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">Ver Información</a>
   </div>
+</div>
 
+<div class="tile" ng-class="{ 'sold': tc.pieceData.vendida == 1 }" ng-if="tc.lang == 'en'">
+  <div ng-if="!tc.pieceData.thumb">
+    <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
+  </div>
+  <div ng-if="tc.pieceData.thumb">  
+    <img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}{{ tc.pieceData.thumb }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
+  </div>
+  <div class="caption">
+    <h5 class="text-uppercase">
+      <a ng-href="/artists/{{ tc.pieceData.idArtista }}">{{ tc.pieceData.nombreArtista }}</a>
+    </h5>
+    <h4 class="text-uppercase">{{ tc.pieceData.titulo }}</h4>
+    <p class="description"><strong>Technique:&nbsp;</strong>{{ tc.pieceData.tecnicaIngles }} <br />
+    <small><strong>Height:&nbsp;</strong>{{ tc.pieceData.altura }} cms / <strong>Width:&nbsp;</strong>{{ tc.pieceData.ancho }} cms</small></p>
+    <a ng-click="tc.openModal();" class="btn btn-default text-uppercase hvr-sweep-to-bottom" role="button">More Information</a>
+  </div>
 </div>
