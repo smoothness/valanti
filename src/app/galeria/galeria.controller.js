@@ -5,9 +5,11 @@
 	  .module('valanti')
 	  .controller('GaleriaController', GaleriaController);
 
-	GaleriaController.$inject = ['$scope', 'MiscServices'];
+	GaleriaController.$inject = ['$scope', 'MiscServices', '$rootScope'];
 
-	function GaleriaController($scope, MiscServices) {
+	function GaleriaController($scope, MiscServices, $rootScope) {
+
+    $rootScope.title = 'Galería Valanti - Nosotros';
 		
 		var ctrl = this;
 

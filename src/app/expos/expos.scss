@@ -6,10 +6,13 @@
 	}
 
 	.expo {
-		background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 0;
+        padding: 20px;
+
+        > div {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
 
     .banner {
     	img {
@@ -21,8 +24,10 @@
     	padding: 20px;
 
     	h2 {
+            font-size: 1.8em;
     		font-family: 'Karma', serif;
     		margin-top: 10px;
+            min-height: 60px;
     	}
     }
 

@@ -41,7 +41,12 @@
   
   .nav {
     width: 100%;
+    text-align: center;
+    
     li {
+      display: inline-block;
+      float: none;
+
       a {
         color: black;
         font-size: 1.1em;
@@ -52,7 +57,7 @@
         opacity: 0.75;
       }
       &.social {
-        float: right;
+        // float: right;
         height: 35px;
         padding-top: 15px;
         ul {

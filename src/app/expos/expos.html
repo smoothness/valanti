@@ -5,34 +5,38 @@
       <div class="row">
         <div class="col-xs-12">
           <preloader ng-show="!ec.loaded"></preloader>
+
           <div ng-repeat="expo in ec.expos" ng-show="ec.loaded" class="col-md-6 expo">
-            <div class="banner">
-              <div ng-if="!expo.imagen">
-                <img class="img-responsive" src="assets/images/expo-banner-placeholder.jpg" alt="Exposiciones / Galería Valanti">
-              </div>
-              <div ng-if="expo.imagen">
-            	  <img src="{{ENDPOINT_URI}}{{ expo.imagen }}" alt="{{ expo.titulo }} por {{ expo.artistas }}">
-              </div>
-            </div>
-            <div class="content">
-              <h2>{{ expo.titulo }}</h2>
-              <h4 ng-if="ec.lang == 'sp'">Artista: <strong>{{ expo.artistas }}</strong></h4>
-              <h4 ng-if="ec.lang == 'en'">Artist: <strong>{{ expo.artistas }}</strong></h4>
-              <p>{{ expo.descripcion }}</p>
-            </div>
-            <div class="footer">
-              <div class="row">
-                <div class="col-md-6">
-                  <p ng-if="ec.lang == 'sp'"><strong>Lugar: </strong>{{ expo.lugar }}</p>  
-                  <p ng-if="ec.lang == 'en'"><strong>Location: </strong>{{ expo.lugar }}</p>    
+            <div>
+              <div class="banner">
+                <div ng-if="!expo.imagen">
+                  <img class="img-responsive" src="assets/images/expo-banner-placeholder.jpg" alt="Exposiciones / Galería Valanti">
                 </div>
-                <div class="col-md-6">
-                  <p ng-if="ec.lang == 'sp'"><strong>Fecha: </strong>{{ expo.fecha }}</p>
-                  <p ng-if="ec.lang == 'en'"><strong>Date: </strong>{{ expo.fecha }}</p>
+                <div ng-if="expo.imagen">
+              	  <img class="img-responsive" ng-src="{{ec.baseUri}}{{ expo.imagen }}" alt="{{ expo.titulo }} por {{ expo.artistas }}">
+                </div>
+              </div>
+              <div class="content">
+                <h2>{{ expo.titulo }}</h2>
+                <h4 ng-if="ec.lang == 'sp'">Artista: <strong>{{ expo.artistas }}</strong></h4>
+                <h4 ng-if="ec.lang == 'en'">Artist: <strong>{{ expo.artistas }}</strong></h4>
+                <p>{{ expo.descripcion }}</p>
+              </div>
+              <div class="footer">
+                <div class="row">
+                  <div class="col-md-6">
+                    <p ng-if="ec.lang == 'sp'"><strong>Lugar: </strong>{{ expo.lugar }}</p>  
+                    <p ng-if="ec.lang == 'en'"><strong>Location: </strong>{{ expo.lugar }}</p>    
+                  </div>
+                  <div class="col-md-6">
+                    <p ng-if="ec.lang == 'sp'"><strong>Fecha: </strong>{{ expo.fecha }}</p>
+                    <p ng-if="ec.lang == 'en'"><strong>Date: </strong>{{ expo.fecha }}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

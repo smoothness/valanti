@@ -5,9 +5,11 @@
     .module('valanti')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['$modal', 'HomeTilesModel', 'SlidesModel', 'ArtistsModel', 'PiecesModel', 'ENDPOINT_URI', 'MiscServices', '$scope'];
+  MainController.$inject = ['$modal', 'HomeTilesModel', 'SlidesModel', 'ArtistsModel', 'PiecesModel', 'ENDPOINT_URI', 'MiscServices', '$scope', '$rootScope'];
 
-  function MainController($modal, HomeTilesModel, SlidesModel, ArtistsModel, PiecesModel, ENDPOINT_URI, MiscServices, $scope) {
+  function MainController($modal, HomeTilesModel, SlidesModel, ArtistsModel, PiecesModel, ENDPOINT_URI, MiscServices, $scope, $rootScope) {
+    
+    $rootScope.title = 'Galería Valanti';
     
     var ctrl = this;
 

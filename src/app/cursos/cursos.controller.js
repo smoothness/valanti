@@ -5,9 +5,11 @@
 	  .module('valanti')
 	  .controller('CursosController', CursosController);
 
-	CursosController.$inject = ['ENDPOINT_URI', '$scope', 'MiscServices'];
+	CursosController.$inject = ['ENDPOINT_URI', '$scope', 'MiscServices', '$rootScope'];
 
-	function CursosController(ENDPOINT_URI, $scope, MiscServices) {
+	function CursosController(ENDPOINT_URI, $scope, MiscServices, $rootScope) {
+
+    $rootScope.title = 'Galería Valanti - Cursos';
 		
 		var ctrl = this;
 

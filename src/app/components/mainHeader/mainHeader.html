@@ -1,4 +1,5 @@
 <div class="header">
+
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -12,18 +13,20 @@
     </h1>
     <hr>
   </div>
+
   <div class="navbar navbar-default " role="navigation">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle collapsed pull-left" ng-click="navCollapsed = !navCollapsed">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div class="navbar-collapse collapse">
-        <!-- Spanish menu block -->
+
+      <div collapse="!navCollapsed" class="collapse navbar-collapse">
+        <!-- Spanish Menu Block -->
         <ul class="nav navbar-nav text-uppercase" ng-if="mheader.lang == 'sp'">
           <li><a href="/artists">Artistas</a></li>
           <li><a href="/servicios">Servicios</a></li>
@@ -33,7 +36,6 @@
           <li><a href="/contacto">Contáctenos</a></li>
           <li class="social">
             <ul>
-              <!-- <li><a href="#" class="pull-right social-btn"><i class="fa fa-search"></i></a></li> -->
               <li><a href="https://www.facebook.com/GaleriaValanti" class="pull-right social-btn" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
               <li><a href="https://instagram.com/galeriavalanti/" class="pull-right social-btn" target="_blank"><i class="fa fa-instagram"></i></a></li>
             </ul>
@@ -49,13 +51,14 @@
           <li><a href="/contacto">Contact Us</a></li>
           <li class="social">
             <ul>
-              <!-- <li><a href="#" class="pull-right social-btn"><i class="fa fa-search"></i></a></li> -->
               <li><a href="https://www.facebook.com/GaleriaValanti" class="pull-right social-btn" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
               <li><a href="https://instagram.com/galeriavalanti/" class="pull-right social-btn" target="_blank"><i class="fa fa-instagram"></i></a></li>
             </ul>
           </li>
         </ul>
       </div>
+
     </div>
   </div>
-</div>
+
+</div> <!-- closes header -->

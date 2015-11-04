@@ -5,9 +5,11 @@
 	  .module('valanti')
 	  .controller('ExposController', ExposController);
 
-	ExposController.$inject = ['ExposModel', 'ENDPOINT_URI', '$scope', 'MiscServices'];
+	ExposController.$inject = ['ExposModel', 'ENDPOINT_URI', '$scope', 'MiscServices', '$rootScope'];
 
-	function ExposController(ExposModel, ENDPOINT_URI, $scope, MiscServices) {
+	function ExposController(ExposModel, ENDPOINT_URI, $scope, MiscServices, $rootScope) {
+
+    $rootScope.title = 'Galería Valanti - Exposiciones';
 		
 		var ctrl = this;
 

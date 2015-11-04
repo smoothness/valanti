@@ -5,10 +5,12 @@
     .module('valanti')
     .controller('ArtistsController', ArtistsController);
 
-  ArtistsController.$inject = ['ArtistsModel', 'ENDPOINT_URI', '$scope', 'MiscServices'];
+  ArtistsController.$inject = ['ArtistsModel', 'ENDPOINT_URI', '$scope', 'MiscServices', '$rootScope'];
 
-  function ArtistsController(ArtistsModel, ENDPOINT_URI, $scope, MiscServices) {
+  function ArtistsController(ArtistsModel, ENDPOINT_URI, $scope, MiscServices, $rootScope) {
 
+    $rootScope.title = 'Galería Valanti - Artistas';
+    
     var ctrl = this;
 
     // control language

@@ -12,22 +12,8 @@
 			}
 		}
 	}
-	
+
 	.modal-body {
-    position: relative;
-    
-		.modalImg.sold:after { 
-      content: '';
-      width: 10px;
-      height: 10px;
-      border-radius: 5px;
-      background-color: red;
-      position: absolute;
-      top: 5px;
-      right: 20px;
-      display: block;
-      border: 1px solid #fff;
-    }
 		
 		h1, h2, h3, p {
 			margin: 0;
@@ -35,6 +21,7 @@
 		}
 
 		h1 {
+			position: relative;
 			font-family: Karma, serif;
 			font-size: 2em;
 			margin-bottom: 30px;
@@ -77,5 +64,20 @@
 			margin: 30px 0 20px;
 			text-decoration: none;
 		}
+
+		.sold { 
+			h1:after {
+	      content: '';
+	      width: 16px;
+	      height: 16px;
+	      border-radius: 8px;
+	      background-color: red;
+	      position: absolute;
+	      top: 5px;
+	      right: 0px;
+	      display: block;
+	      border: 1px solid #fff;
+    	}
+    }
 	}
 }

@@ -5,10 +5,12 @@
     .module('valanti')
     .controller('ArtistDetailController', ArtistDetailController);
 
-  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal'];
+  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal', '$rootScope'];
 
-  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal) {
+  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal, $rootScope) {
     
+    $rootScope.title = 'Galería Valanti - Artistas';
+
     var ctrl = this;
     var artistId = $stateParams.id;
     

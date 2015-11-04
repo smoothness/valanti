@@ -9,18 +9,6 @@
     background-color: #fff;
     border: 1px solid #ddd;
     position: relative;
-    &.sold:after {
-      content: '';
-      width: 10px;
-      height: 10px;
-      border-radius: 5px;
-      background-color: red;
-      position: absolute;
-      top: 5px;
-      right: 5px;
-      display: block;
-      border:1px solid #fff;
-    }
     transition: border .2s ease-in-out;
     img {
       width: 100%;
@@ -46,13 +34,14 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      cursor: pointer;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      font-size: 12px;
-      font-weight: bold;
-      transition: opacity 0.2s linear;
-      &:hover {opacity: 0.6;}
+        cursor: pointer;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        position:relative;
+        transition: opacity 0.2s linear;
+        &:hover {opacity: 0.6;}
     }
     p {
       color: $font-gray-color;
@@ -77,6 +66,20 @@
       padding: 10px 10px 14px;
       strong {
         color: #333;
+      }
+    }
+    &.sold {
+      h5:after {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        background-color: red;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        display: block;
+        border: 1px solid #fff;
       }
     }
   }

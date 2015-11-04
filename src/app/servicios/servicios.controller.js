@@ -5,11 +5,12 @@
 	  .module('valanti')
 	  .controller('ServiciosController', ServiciosController);
 
-	ServiciosController.$inject = ['MiscServices', '$scope'];
+	ServiciosController.$inject = ['MiscServices', '$scope', '$rootScope'];
 
-	function ServiciosController(MiscServices, $scope) {
+	function ServiciosController(MiscServices, $scope, $rootScope) {
 		
-		var ctrl = this;
+    $rootScope.title = 'Galería Valanti - Servicios';
+    var ctrl = this;
 
     // control language
     ctrl.lang;

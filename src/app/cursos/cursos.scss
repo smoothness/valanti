@@ -35,6 +35,10 @@
     			border-top: 1px solid #ddd;
     			padding: 20px;
 
+                .col-md-12:first-child {
+                    margin-bottom: 5px;
+                }
+
     			p {
     				margin: 0;
     			}
@@ -45,6 +49,10 @@
 
                 .info {
                     margin-top: 20px;
+
+                    p span {
+                        float: right;
+                    }
                 }
         }
 	}

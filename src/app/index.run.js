@@ -11,6 +11,7 @@
     // $log.debug('runBlock end');
     
     $rootScope.lang = 'sp';
+    $rootScope.title;
 
     $rootScope.go = function (path) {
 			// if (!globalStateService.isAdjustTileState()) {
