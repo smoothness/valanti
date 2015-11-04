@@ -14,8 +14,16 @@
                 <div class="caption text-right">
                   <h3 class="text-uppercase"><a ng-click="go('/artists/' + slide.idArtista)" class="text-uppercase">{{ slide.nombreArtista }}</a></h3>
                   <h2 class="text-uppercase">{{ slide.titulo }}</h2>
-                  <p>{{ slide.tecnica }} <br /> <small>{{ slide.altura }} x {{ slide.ancho }} cms</small></p>
-                  <p><a ng-click="go('/artists/' + slide.idArtista)" class="text-uppercase">Otras Obras de {{ slide.nombreArtista }}</a></p>
+
+                  <div ng-if="main.lang == 'sp'">
+                    <p>{{ slide.tecnica }} <br /> <small>{{ slide.altura }} x {{ slide.ancho }} cms</small></p>
+                    <p><a ng-click="go('/artists/' + slide.idArtista)" class="text-uppercase">Otras Obras de {{ slide.nombreArtista }}</a></p>
+                  </div>
+                  <div ng-if="main.lang == 'en'">
+                    <p>{{ slide.tecnicaIngles }} <br /> <small>{{ slide.altura }} x {{ slide.ancho }} cms</small></p>
+                    <p><a ng-click="go('/artists/' + slide.idArtista)" class="text-uppercase">Other pieces of {{ slide.nombreArtista }}</a></p>
+                  </div>
+
                 </div>
               </div>
             </div>
