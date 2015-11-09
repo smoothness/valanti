@@ -9,7 +9,7 @@
 
 	function GaleriaController($scope, MiscServices, $rootScope) {
 
-    $rootScope.title = 'Galería Valanti - Nosotros';
+    $rootScope.title = 'Acerca de la Galería Valanti';
 		
 		var ctrl = this;
 

@@ -13,7 +13,6 @@
 
 		service.switchLanguage = function() {
 			$rootScope.lang == 'en' ? $rootScope.lang = 'sp' : $rootScope.lang = 'en';
-			console.log(service.getLanguage());
 		}
 
 		service.getLanguage = function () {

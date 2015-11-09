@@ -8,7 +8,7 @@
           <div class="thumbnail">
             <div class="row">
               <div class="col-xs-8 slideImg ng-class="{ 'sold': slide.vendida == 1 }"">
-                <img ng-click="main.open({ currPiece: slide });" class="img-responsive" ng-src="{{ main.baseUri }}{{ slide.imagen }}">
+                <img ng-click="main.open({ currPiece: slide });" class="img-responsive" ng-src="{{ main.baseUri }}imgd.php?q=50&w=400&dpr=2&src={{ slide.imagen }}">
               </div>
               <div class="col-xs-4">
                 <div class="caption text-right">
@@ -50,7 +50,7 @@
             <div ng-repeat="tile in main.homeTiles | filter: search">
               <!-- <div class="clearfix visible-md-block" ng-if="$index % 4 == 0"></div>
               <div class="clearfix visible-sm-block" ng-if="$index % 3 == 0"></div> -->
-              <div class="col-sm-4 col-md-3 col-xs-6">
+              <div class="col-sm-4 col-md-3 col-xs-12">
                 <tile piece-data="tile" open-modal="main.open({ currPiece: tile })"></tile>
               </div>
             </div>

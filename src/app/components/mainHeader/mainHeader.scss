@@ -146,17 +146,23 @@
 
 @media screen and (max-width: 768px) {
   .header {
+
     .nav {
+
       li {
+        display: block;
+
         a {
           margin-right: 18px;
           font-size: 14px;
           font-weight: 900;
-          padding: 25px 0;
+          padding: 7px 0;
+
           &.social-btn {
             margin-left: 16px;
             margin-right: 0;
             padding: 25px 0px;
+
             i {
               padding: 0;
               line-height: 0;
@@ -164,6 +170,47 @@
           }
         }
       }
+
+      .social {
+
+        ul {
+          text-align: center;
+          width: 100%;
+
+          li {
+            display: inline-block;
+            float: none !important;
+            // margin: 0 !important;
+
+            &:first-child {margin-left:-25px!important}
+
+            a {
+              margin: 0;
+              padding: 0;
+
+            }
+          }
+        }
+      }
     }
   }
+
+  .carousel {
+    .thumbnail .caption {
+      display: none;
+    }
+
+    .slideImg {
+      width:100%;
+    }
+
+    .carousel-control {
+      bottom: -30px;
+      &.left {left: 10px}
+      &.right {right: 10px;}
+    }
+  }
+
+
+
 }

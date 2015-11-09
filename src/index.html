@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ title }}</title>
     <meta name="description" content="Galeria Valanti">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content = "initial-scale = 1, minimum-scale = 1, maximum-scale = 1, user-scalable = 0" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -52,5 +52,25 @@
       ga('create', 'UA-59988203-1', 'auto');
       ga('send', 'pageview');
     </script>
+    <!--Start of HappyFox Live Chat Script-->
+    <script>
+     window.HFCHAT_CONFIG = {
+         EMBED_TOKEN: "7bc22e80-84a2-11e5-bbcb-0de8780bcde2",
+         ACCESS_TOKEN: "cc22998c59f14afe8692437a244301ae",
+         HOST_URL: "https://happyfoxchat.com",
+         ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+     };
+
+    (function() {
+      var scriptTag = document.createElement('script');
+      scriptTag.type = 'text/javascript';
+      scriptTag.async = true;
+      scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(scriptTag, s);
+    })();
+    </script>
+    <!--End of HappyFox Live Chat Script-->
   </body>
 </html>

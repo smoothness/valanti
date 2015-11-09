@@ -19,14 +19,14 @@
         
         <preloader ng-show="!ac.loaded"></preloader>
         
-        <div class="col-sm-4 col-md-3 col-xs-6" ng-repeat="artist in ac.artists | filter: search" ng-show="ac.loaded">
+        <div class="col-sm-4 col-md-3 col-xs-12" ng-repeat="artist in ac.artists | filter: search" ng-show="ac.loaded">
           <div class="tile">
 
             <div ng-if="!artist.imagen">
               <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
             </div>
             <div ng-if="artist.imagen">
-              <img ng-click="go('/artists/' + artist.idArtista)" class="img-responsive" ng-src="{{ ac.baseUri }}{{ artist.imagen }}" alt="{{ artist.nombreCompleto }}">
+              <img ng-click="go('/artists/' + artist.idArtista)" class="img-responsive" ng-src="{{ ac.baseUri }}imgd.php?&dpr=2&src={{ artist.imagen }}" alt="{{ artist.nombreCompleto }}">
             </div>
 
             <div class="caption">

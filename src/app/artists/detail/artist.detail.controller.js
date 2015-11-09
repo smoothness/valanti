@@ -5,9 +5,9 @@
     .module('valanti')
     .controller('ArtistDetailController', ArtistDetailController);
 
-  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal', '$rootScope'];
+  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal', '$rootScope', '$sce'];
 
-  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal, $rootScope) {
+  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal, $rootScope, $sce) {
     
     $rootScope.title = 'Galería Valanti - Artistas';
 
@@ -16,6 +16,7 @@
     
     ctrl.loaded = false;
     ctrl.baseUri = ENDPOINT_URI;
+    ctrl.videos = [];
 
     // Modal instantiation
     ctrl.animationsEnabled = true;
@@ -40,7 +41,11 @@
       ArtistsModel.fetch(artistId)
         .then(function(result) {
           ctrl.artist = (result !== 'null') ? result[0] : {};
+          $rootScope.title = ctrl.artist.nombreCompleto;
           ctrl.loaded = true;
+          if(ctrl.artist.linkVideo1 !== '') {
+            getVideos(ctrl.artist);
+          }
         });
     };
 
@@ -56,6 +61,15 @@
     };
 
     ctrl.getPiecesByArtist();
+
+    // get artist videos if it has any
+    var getVideos = function(artist) {
+      if(artist.linkVideo1 != ''){
+        ctrl.videos.push($sce.trustAsResourceUrl(artist.linkVideo1));
+      } else if(artist.linkVideo2 != '') {
+        ctrl.videos.push($sce.trustAsResourceUrl(artist.linkVideo2));
+      }
+    };
 
   }
 
