@@ -8,7 +8,7 @@
           <div class="thumbnail">
             <div class="row">
               <div class="col-xs-8 slideImg ng-class="{ 'sold': slide.vendida == 1 }"">
-                <img ng-click="main.open({ currPiece: slide });" class="img-responsive" ng-src="{{ main.baseUri }}imgd.php?q=50&w=400&dpr=2&src={{ slide.imagen }}">
+                <div class="divImg" ng-click="main.open({ currPiece: slide });" style="background-image: url({{ main.baseUri }}imgd.php?q=50&crop-to-fit&h=465&dpr=2&src={{ slide.imagen }})"></div>
               </div>
               <div class="col-xs-4">
                 <div class="caption text-right">
