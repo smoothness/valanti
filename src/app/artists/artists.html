@@ -1,3 +1,4 @@
+<!--
 <div class="gallery-filter gallery-filter-artists">
    <div class="container">
     <div class="row">
@@ -11,14 +12,15 @@
     </div>
   </div>
 </div>
+-->
 
 <div class="container artists">
 
     <div class="row">
       <div class="col-xs-12 gallery-tiles">
-        
+
         <preloader ng-show="!ac.loaded"></preloader>
-        
+
         <div class="col-sm-4 col-md-3 col-xs-12" ng-repeat="artist in ac.artists | filter: search" ng-show="ac.loaded">
           <div class="tile">
 
