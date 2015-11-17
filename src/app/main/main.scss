@@ -26,11 +26,14 @@
       border-right: 0;
       text-align: center;
     }
-    img {
+    .divImg {
       margin: 0 auto;
       border: 8px solid white;
-      // min-height: 300px;
       height: 465px;
+      min-width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       cursor: pointer;
       opacity: 1;
       transition: opacity 0.2s linear;
