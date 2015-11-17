@@ -28,11 +28,11 @@
           <div class="footer">
             <div class="row">
               <div class="col-md-6 col-sm-12">
-                <p ng-if="ec.lang == 'sp'"><strong>Lugar: </strong>{{ expo.lugar }}</p>  
-                <p ng-if="ec.lang == 'en'"><strong>Location: </strong>{{ expo.lugar }}</p>    
+                <p ng-if="ec.lang == 'sp'"><strong>Lugar: </strong>{{ expo.lugar }}</p>
+                <p ng-if="ec.lang == 'en'"><strong>Location: </strong>{{ expo.lugar }}</p>
               </div>
               <div class="col-md-6 col-sm-12">
-                <p ng-if="ec.lang == 'sp'"><strong>Fecha: </strong>{{ expo.fecha }}</p>
+                <p ng-if="ec.lang == 'sp'"><strong>Fecha: </strong>{{ expo.fecha | date: 'MM/dd/yyyy @ h:mma' }}</p>
                 <p ng-if="ec.lang == 'en'"><strong>Date: </strong>{{ expo.fecha }}</p>
               </div>
             </div>
