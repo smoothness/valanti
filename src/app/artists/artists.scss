@@ -21,10 +21,12 @@
 }
 
 pre {
-    display: block;
+    display:flex;
     font-family: 'Lato', sans-serif !important;
 		font-size: 1em;
-    white-space: pre-line;
+
+		white-space: pre-line;
+		word-break: keep-all !important;
     margin: 1em 0;
 		background-color: white;
 		border: 0;

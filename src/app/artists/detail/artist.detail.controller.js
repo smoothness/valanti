@@ -5,21 +5,33 @@
     .module('valanti')
     .controller('ArtistDetailController', ArtistDetailController);
 
-  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal', '$rootScope', '$sce'];
+  ArtistDetailController.$inject = ['ArtistsModel', 'PiecesModel', '$stateParams', 'ENDPOINT_URI', '$modal', '$scope', 'MiscServices', '$rootScope', '$sce'];
 
-  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal, $rootScope, $sce) {
-    
+  function ArtistDetailController(ArtistsModel, PiecesModel, $stateParams, ENDPOINT_URI, $modal, $scope, MiscServices, $rootScope, $sce) {
+
     $rootScope.title = 'Galería Valanti - Artistas';
 
     var ctrl = this;
     var artistId = $stateParams.id;
-    
+
     ctrl.loaded = false;
     ctrl.baseUri = ENDPOINT_URI;
     ctrl.videos = [];
 
     // Modal instantiation
     ctrl.animationsEnabled = true;
+
+    // control language
+    ctrl.lang;
+
+    $scope.$watch(
+      function watchLang($scope){
+        return(ctrl.lang = MiscServices.getLanguage());
+      },
+      function(newValue, oldValue){
+        // console.log("ctrl.lang: ", newValue);
+      }
+    );
 
     ctrl.open = function(item) {
       var modalInstance = $modal.open({

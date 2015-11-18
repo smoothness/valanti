@@ -18,7 +18,7 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-12 gallery-tiles">
+      <div class="col-xs-12 gallery-tiles" ng-if="adc.lang == 'sp'">
         <tabset>
           <tab heading="Galería">
             <preloader ng-show="!adc.loaded"></preloader>
@@ -48,7 +48,40 @@
               <iframe ng-src="{{adc.videos[1]}}" frameborder="0" allowfullscreen></iframe>
             </div>
           </tab>
-        </tabset> 
+        </tabset>
+      </div>
+
+      <div class="col-xs-12 gallery-tiles" ng-if="adc.lang == 'en'">
+        <tabset>
+          <tab heading="Gallery">
+            <preloader ng-show="!adc.loaded"></preloader>
+            <div ng-show="adc.loaded">
+              <div class="col-sm-4 col-md-3 col-xs-12" ng-repeat="tile in adc.piecesByArtist">
+                <tile piece-data="tile" open-modal="adc.open({ currPiece: tile })"></tile>
+              </div>
+            </div>
+          </tab>
+          <tab heading="Biografy">
+            <div>
+              <p ng-bind-html="adc.artist.biografia"></p>
+            </div>
+          </tab>
+          <tab heading="Exhibits">
+            <div>
+              <p ng-bind-html="adc.artist.exposiciones"></p>
+            </div>
+          </tab>
+          <tab heading="Videos" ng-if="adc.artist.linkVideo1">
+            <div class="videos embed-container">
+              <!-- {{adc.artist.linkVideo1 | json}} -->
+              <iframe ng-src="{{adc.videos[0]}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video embed-container" ng-if="adc.artist.linkVideo2">
+              <!-- {{adc.artist.linkVideo2 | json}} -->
+              <iframe ng-src="{{adc.videos[1]}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </tab>
+        </tabset>
       </div>
 
   </div>
