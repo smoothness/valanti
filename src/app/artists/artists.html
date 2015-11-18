@@ -1,18 +1,16 @@
-<!--
 <div class="gallery-filter gallery-filter-artists">
    <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <select class="form-control input-sm" ng-model="search.nombreCompleto">
+        <select class="form-control input-sm" ng-model="search" ng-change="go('/artists/' + search)">
           <option value="" ng-if="ac.lang == 'sp'">Buscar por Artista</option>
           <option value="" ng-if="ac.lang == 'en'">Search by Artist</option>
-          <option value="{{ artist }}" ng-repeat="artist in ac.allArtistNames">{{ artist }}</option>
+          <option value="{{ artist.idArtista }}" ng-repeat="artist in ac.artists">{{ artist.nombreCompleto }}</option>
         </select>
       </div>
     </div>
   </div>
 </div>
--->
 
 <div class="container artists">
 
