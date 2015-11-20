@@ -14,13 +14,6 @@
     var ctrl = this;
     var artistId = $stateParams.id;
 
-    ctrl.loaded = false;
-    ctrl.baseUri = ENDPOINT_URI;
-    ctrl.videos = [];
-
-    // Modal instantiation
-    ctrl.animationsEnabled = true;
-
     // control language
     ctrl.lang;
 
@@ -32,6 +25,13 @@
         // console.log("ctrl.lang: ", newValue);
       }
     );
+
+    ctrl.loaded = false;
+    ctrl.baseUri = ENDPOINT_URI;
+    ctrl.videos = [];
+
+    // Modal instantiation
+    ctrl.animationsEnabled = true;
 
     ctrl.open = function(item) {
       var modalInstance = $modal.open({
