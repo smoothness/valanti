@@ -78,7 +78,8 @@
     var getVideos = function(artist) {
       if(artist.linkVideo1 != ''){
         ctrl.videos.push($sce.trustAsResourceUrl(artist.linkVideo1));
-      } else if(artist.linkVideo2 != '') {
+      } 
+      if (artist.linkVideo2 != '') {
         ctrl.videos.push($sce.trustAsResourceUrl(artist.linkVideo2));
       }
     };
