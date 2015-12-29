@@ -6,7 +6,7 @@
 <div class="modal-body">
 	<div class="row">
 		<div class="col-md-8">
-			<img class="img-responsive" ng-src="{{ baseUri }}imgd.php?q=50&w=800&dpr=2&src={{ item.imagen }}" alt="{{ item.nombreArtista }} | {{ item.titulo }}">
+			<a href="{{ baseUri }}imgd.php?q=50&w=1200&dpr=2&src={{ item.imagen }}" target="_blank"><img class="img-responsive" ng-src="{{ baseUri }}imgd.php?q=50&w=800&dpr=2&src={{ item.imagen }}" alt="{{ item.nombreArtista }} | {{ item.titulo }}" title="{{ item.nombreArtista }} | {{ item.titulo }}"></a>
 
 			<!-- http://www.galeriavalanti.com/imgd.php?q=50&w=800&src=/data/images/obras/54.jpg -->
 		</div>
