@@ -1,9 +1,9 @@
 <div class="tile" ng-class="{ 'sold': tc.pieceData.vendida == 1 }" ng-if="tc.lang == 'sp'">
-	<div ng-if="!tc.pieceData.thumb">
+	<div ng-if="!tc.pieceData.imagen">
     <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
 	</div>
-	<div ng-if="tc.pieceData.thumb">	
-  	<img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}imgd.php?dpr=2&src={{ tc.pieceData.thumb }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
+	<div ng-if="tc.pieceData.imagen">
+		<img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}imgd.php?dpr=2&w=210&h=150&fill-to-fit=FFFFFF&src={{ tc.pieceData.imagen }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
   </div>
   <div class="caption">
     <h5 class="text-uppercase">
@@ -17,11 +17,11 @@
 </div>
 
 <div class="tile" ng-class="{ 'sold': tc.pieceData.vendida == 1 }" ng-if="tc.lang == 'en'">
-  <div ng-if="!tc.pieceData.thumb">
+  <div ng-if="!tc.pieceData.imagen">
     <img class="img-responsive" ng-src="assets/images/foto-no-disponible.jpg" alt="Foto no Disponible">
   </div>
-  <div ng-if="tc.pieceData.thumb">  
-    <img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}imgd.php?dpr=2&src={{ tc.pieceData.thumb }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
+  <div ng-if="tc.pieceData.imagen">
+    <img ng-click="tc.openModal();" class="img-responsive" ng-src="{{ tc.baseUri }}imgd.php?dpr=2&w=210&h=150&fill-to-fit=FFFFFF&src={{ tc.pieceData.imagen }}" alt="{{ tc.pieceData.nombreArtista }} | {{ tc.pieceData.titulo }}">
   </div>
   <div class="caption">
     <h5 class="text-uppercase">
